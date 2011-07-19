@@ -1,4 +1,5 @@
-#summary The general overview of the project.
+#summary What is the NAI framework?.
+#sidebar TableOfContents
 <wiki:toc max_depth="1" />
 = What is the NAI framework? =
 The NAI framework has been developed as part of the master thesis by *Michael Thomassen* and *Thomas Berglund*, IT University of Copenhagen, Denmark, with [http://www.itu.dk/people/bardram/pmwiki/ Professor Jakob Bardram] as supervisor.
