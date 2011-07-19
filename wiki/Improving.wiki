@@ -24,3 +24,5 @@ When the Surface code is checked out from trunk, you get a solution containing t
 || NAIDevelopment || A sparse test project which directly reference the NAI class library and is executeable. Useful for testing changes to the framework code ||
 
 The class  `DebugSettings` in the root of the NAI project can be used to turn console debugging on and off for different areas of the code.
+
+To get an idea of how the code is structured, chapter 3 and 5 of our thesis is relevant to read.
