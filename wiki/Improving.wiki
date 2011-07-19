@@ -20,7 +20,7 @@ Here is what is necessary to do in order to get started on improving the two pla
 === The MS Surface code ==
 When the Surface code is checked out from trunk, you get a solution containing two projects:
 || *Title* || *Description* ||
-|| NAI || The actual framework as a class library. The project in itself only compiles into a DLL and is hence not executeable ||
+|| NAI || The actual framework as a class library. The project compiles into a DLL and is hence in itself not executeable ||
 || NAIDevelopment || A sparse test project which directly reference the NAI class library and is executeable. Useful for testing changes to the framework code ||
 
 The class  `DebugSettings` in the root of the NAI project can be used to turn console debugging on and off for different areas of the code.
