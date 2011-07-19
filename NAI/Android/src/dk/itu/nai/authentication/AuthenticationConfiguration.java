@@ -10,8 +10,7 @@ public class AuthenticationConfiguration {
 	
 	private AuthenticationConfiguration()
 	{
-    	// Declare a trust manager which accepts everything 
-    	// (including our own self-assigned server certificate)
+    	// WARNING! A trust manager that any kind of certificate. Override for increased security
 		TrustManager[] trustAllCerts = new TrustManager[]{
 			    new X509TrustManager() {
 			        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
