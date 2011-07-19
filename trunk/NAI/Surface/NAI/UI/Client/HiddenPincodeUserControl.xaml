@@ -1,0 +1,15 @@
+﻿<s:SurfaceUserControl x:Class="NAI.UI.Client.HiddenPincodeUserControl" x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008">
+    <StackPanel Orientation="Horizontal"  Width="115" Height="30">
+        <Border Name="CodeBackground" BorderThickness="1" BorderBrush="DarkGray" Background="White" Opacity="0.4" CornerRadius="5">
+            <TextBlock Name="TxtCode"  TextAlignment="Center" FontSize="22" FontWeight="Bold" Margin="0,0,2,0" Width="75" Foreground="Black">
+            * * * *
+            </TextBlock>
+        </Border>
+        <s:SurfaceButton Margin="5,0,0,0" 
+                s:Contacts.PreviewContactUp="SurfaceButton_ContactUp"
+                s:Contacts.PreviewContactDown="SurfaceButton_ContactDown"/>
+    </StackPanel>
+</s:SurfaceUserControl>

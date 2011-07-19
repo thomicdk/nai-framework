@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NAI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LoadCalibrations" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SimulatorOriginOffset" Type="System.Drawing.Point" Scope="Application">
+      <Value Profile="(Default)">25, 101</Value>
+    </Setting>
+    <Setting Name="LoadAndSaveCalibrations" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ServerCertificateSubject" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CN=Test Certificate, O=ITU, E=mtho@itu.dk, L=Copenhagen, C=DK</Value>
+    </Setting>
+    <Setting Name="SimulatorMode" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DefaultStreamingFrameRate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="UdpCallSign" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SecureTouch</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
