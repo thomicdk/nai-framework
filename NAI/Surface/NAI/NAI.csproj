@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC2EBDEC-B4E6-4C22-96B8-994384596531}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NAI</RootNamespace>
+    <AssemblyName>NAI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Surface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Surface.Presentation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Surface.Presentation.Generic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\Authentication\AuthenticationState.cs" />
+    <Compile Include="Client\Authentication\BasicAuthenticationHandler.cs" />
+    <Compile Include="Client\Authentication\BasicClientCredentials.cs" />
+    <Compile Include="Client\Authentication\ClientCredentials.cs" />
+    <Compile Include="Client\Authentication\IAuthenticationHandler.cs" />
+    <Compile Include="Client\Calibration\CalibrationData.cs" />
+    <Compile Include="Client\Calibration\CalibrationState.cs" />
+    <Compile Include="Client\ClientIdentity.cs" />
+    <Compile Include="Client\ClientSession.cs" />
+    <Compile Include="Client\ClientSessionsController.cs" />
+    <Compile Include="Client\ClientState.cs" />
+    <Compile Include="Client\PairedState.cs" />
+    <Compile Include="Client\Pairing\PairingCode.cs" />
+    <Compile Include="Client\Pairing\PairingCodeSet.cs" />
+    <Compile Include="Client\Pairing\PairingCodeType.cs" />
+    <Compile Include="Client\Pairing\PairingState.cs" />
+    <Compile Include="Client\Streaming\StreamingProcessor.cs" />
+    <Compile Include="Client\Streaming\StreamingRectangle.cs" />
+    <Compile Include="Client\Streaming\StreamingState.cs" />
+    <Compile Include="Communication\MessageLayer\IMessageLayerIncoming.cs" />
+    <Compile Include="Communication\MessageLayer\IMessageLayerOutgoing.cs" />
+    <Compile Include="Communication\MessageLayer\MessageCommunication.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\CalibrationAcceptedMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\ClientPausedMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\ClientResumedMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\ColorCodeMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\CredentialsMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\IncomingBodyLessMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\IncomingMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\PairingCodeMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\PincodeMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\RequestCalibrationMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\TouchDownMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\TouchEventMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\TouchMoveMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Incoming\TouchUpMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Message.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\MessageProtocol.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\AuthenticationAcceptedMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\AuthenticationRejectedMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\FrameMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\OutgoingBodyLessMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\OutgoingMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\PairingCodeAcceptedMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\PictureStreamStartMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\PictureStreamStopMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\PincodeRejectedMessage.cs" />
+    <Compile Include="Communication\MessageLayer\Messages\Outgoing\RequestPairingCodeMessage.cs" />
+    <Compile Include="Communication\Server.cs" />
+    <Compile Include="Communication\SocketLayer\ISocketLayerIncoming.cs" />
+    <Compile Include="Communication\SocketLayer\ISocketLayerOutgoing.cs" />
+    <Compile Include="Communication\SocketLayer\SocketCommunication.cs" />
+    <Compile Include="DebugSettings.cs" />
+    <Compile Include="RuntimeSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Storage\ClientDataStorage.cs" />
+    <Compile Include="UI\Client\CalibrationUserControl.xaml.cs">
+      <DependentUpon>CalibrationUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Client\ClientTagVisualization.xaml.cs">
+      <DependentUpon>ClientTagVisualization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Client\HiddenPincodeUserControl.xaml.cs">
+      <DependentUpon>HiddenPincodeUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Client\PairingUserControl.xaml.cs">
+      <DependentUpon>PairingUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\IdentifiedInteractionArea.cs" />
+    <Compile Include="UI\Controls\IdentifiedViewport.cs" />
+    <Compile Include="UI\Controls\PersonalizedView.cs" />
+    <Compile Include="UI\Client\StreamingRectangleUserControl.xaml.cs">
+      <DependentUpon>StreamingRectangleUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\IdentifiedSurfaceButton.cs" />
+    <Compile Include="UI\Events\IdentifiedEvents.cs" />
+    <Compile Include="UI\Events\RoutedIdentifiedEventArgs.cs" />
+    <Compile Include="UI\Events\RoutedIdentifiedHoverEventArgs.cs" />
+    <Compile Include="UI\Events\RoutedIdentifiedTouchEventArgs.cs" />
+    <Compile Include="UI\Helpers\AnimationHelper.cs" />
+    <Compile Include="UI\Helpers\TransformHelper.cs" />
+    <Compile Include="UI\Helpers\UIHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\Client\CalibrationUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Client\ClientTagVisualization.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Client\HiddenPincodeUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Client\PairingUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Client\StreamingRectangleUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

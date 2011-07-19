@@ -1,0 +1,13 @@
+﻿<s:TagVisualization x:Class="NAI.UI.Client.ClientTagVisualization" x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    Loaded="MyTagVisualization_Loaded"
+    s:TagVisualization.Moved="TagVisualization_Moved"
+    s:TagVisualization.LostTag="TagVisualization_LostTag"
+    TagRemovedBehavior="Disappear"
+    LostTagTimeout="0"
+    UsesTagOrientation="True">
+ 
+    <Grid Name="ContentContainer"></Grid>
+</s:TagVisualization>

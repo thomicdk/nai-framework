@@ -1,0 +1,17 @@
+﻿<s:SurfaceUserControl x:Class="NAI.UI.Client.PairingUserControl" x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:pin="clr-namespace:NAI.UI.Client">
+    <StackPanel Orientation="Vertical">
+        <pin:HiddenPincodeUserControl x:Name="PinCodeShowerTop">
+            <pin:HiddenPincodeUserControl.LayoutTransform>
+                <RotateTransform Angle="180"/>
+            </pin:HiddenPincodeUserControl.LayoutTransform>
+        </pin:HiddenPincodeUserControl>
+        <Border Name="PhoneRectangle" Width="220" Height="150">
+            <TextBlock Name="PincodeTextBlock"  TextAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <pin:HiddenPincodeUserControl x:Name="PinCodeShowerBottom" />
+    </StackPanel>
+</s:SurfaceUserControl>
