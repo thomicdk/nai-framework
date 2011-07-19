@@ -38,7 +38,7 @@ namespace Restaurant.States.Checkout
         {
             Session.Instance.Pay(e.ClientId);
             Session.Instance.NextStateForPerson(e.ClientId);
-            e.ClientVisualization.RemovePersonalizedView();
+            e.ClientId.PersonalizedView.Remove();
         }
     }
 }

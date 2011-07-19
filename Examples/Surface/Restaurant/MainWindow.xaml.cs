@@ -234,14 +234,14 @@ namespace Restaurant
             {
                 if (Session.Instance.GetPerson(e.ClientId).State == Restaurant.Model.States.Ordering)
                 {
-                    e.ClientVisualization.AddPersonalizedView(new ConfirmOrderPersonalView());
+                    e.ClientId.PersonalizedView.Add(new ConfirmOrderPersonalView());
                 }
             }
             else if (Session.Instance.GlobalState == Restaurant.Model.States.Eating)
             {
                 if (Session.Instance.GetPerson(e.ClientId).State == Restaurant.Model.States.Eating)
                 {
-                    e.ClientVisualization.AddPersonalizedView(new GoToPaymentPersonalView());
+                    e.ClientId.PersonalizedView.Add(new GoToPaymentPersonalView());
                 }
             }
             else if (Session.Instance.GlobalState == Restaurant.Model.States.Checkout)
@@ -249,7 +249,7 @@ namespace Restaurant
                 Person p = Session.Instance.GetPerson(e.ClientId);
                 if (p.State == Restaurant.Model.States.Checkout && p.PaymentAmount > 0)
                 {
-                    e.ClientVisualization.AddPersonalizedView(new ConfirmPaymentPersonalView(p));
+                    e.ClientId.PersonalizedView.Add(new ConfirmPaymentPersonalView(p));
                 }
             }
         }
@@ -257,7 +257,7 @@ namespace Restaurant
         private void Ellipse_HoverOut(object sender, RoutedIdentifiedHoverEventArgs e)
         {            
             CenterButtonAnimations();
-            e.ClientVisualization.RemovePersonalizedView();
+            e.ClientId.PersonalizedView.Remove();
         }
 
         protected override void OnInitialized(EventArgs e)
