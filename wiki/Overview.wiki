@@ -24,7 +24,7 @@ The video illustrate both the user experience as well as features of the framewo
 <wiki:video url="http://www.youtube.com/watch?v=H9n6vRNgNR8"/>
 
 = Read the thesis = 
-We strongly suggest you download and read through the thesis mentioned abowe. Especially chapter 3 will serve as a good outset for get at picture of the user experience and as how to program you own application using the framework.
+We strongly suggest you download and read through the thesis mentioned abowe. Especially chapter 3 will serve as a good outset to get at picture of the user experience and how to program you own applications using the framework.
 
 The thesis can be downloaded from the homepage for [http://pit.itu.dk The Pervasive Interaction Technology Lab, IT University of Copenhagen, Denmark].
 Direct link: [http://www.itu.dk/pit/?n=Projects.NonAnnTabletop] 
