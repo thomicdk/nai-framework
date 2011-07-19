@@ -28,7 +28,7 @@ namespace WarmUp
     public partial class ColorEllipseScatterViewItem : ScatterViewItem
     {
 
-        private Dictionary<ClientIdentity, PersonalizedView> _HoveringClientIdentities = new Dictionary<ClientIdentity, PersonalizedView>();
+        private Dictionary<ClientIdentity, IPersonalizedView> _HoveringClientIdentities = new Dictionary<ClientIdentity, IPersonalizedView>();
 
         public ColorEllipseScatterViewItem()
         {
@@ -66,7 +66,7 @@ namespace WarmUp
                 ColorPickerPersonalizedView cp = new ColorPickerPersonalizedView(MyElip);                
                 //cp.Width = cv.GetHitTestRectangleGeometry().Bounds.Width;
                 //cp.Height = cv.GetHitTestRectangleGeometry().Bounds.Height;
-                id.PersonalizedView.AddPersonalizedView(cp);
+                id.PersonalizedView.Add(cp);
                 if (!_HoveringClientIdentities.ContainsKey(id))
                     _HoveringClientIdentities.Add(id, id.PersonalizedView);
             }
@@ -78,7 +78,7 @@ namespace WarmUp
             { 
                 if (_HoveringClientIdentities.ContainsKey(id))
                 {
-                    _HoveringClientIdentities[id].RemovePersonalizedView();
+                    _HoveringClientIdentities[id].Remove();
                     _HoveringClientIdentities.Remove(id);                    
                 }
             }     
