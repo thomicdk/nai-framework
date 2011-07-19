@@ -1,9 +1,10 @@
-#summary This is how you setup you Microsoft Surface for the NAI framework
+#summary One-sentence summary of this page.
 
-= Setup the Microsoft Surface =
+= Introduction =
 
 Add your content here.
 
+[http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
 
 = Details =
 
