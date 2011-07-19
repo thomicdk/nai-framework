@@ -13,8 +13,8 @@ Direct link: [http://www.itu.dk/pit/?n=Projects.NonAnnTabletop]
 
 = Requirements = 
 The NAI framework has been built for to specific hardware components
-* Smartphone running Android 2.1 or later
-* Microsoft Surface 1.0  
+  * Smartphone running Android 2.1 or later
+  * Microsoft Surface 1.0  
 
 The NAI framework have not been tested on other Android versions than 2.1 and 2.2. However, it should operate on later version of the software stack as well. During development we used HTC Desire with Android 2.2, HTC Legend with Android 2.1. 
 There is no guarantee that it will run on other types of hardware or Android verions.
