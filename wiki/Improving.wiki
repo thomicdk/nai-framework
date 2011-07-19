@@ -1,15 +1,8 @@
-#summary One-sentence summary of this page.
+#summary Participate in improving the NAI framework
 #sidebar TableOfContents
+= Improving the NAI framework =
+Besides removing bugs, there are a number of features we would like to suggest for future work. These are also stated in the thesis mentioned at the [Overview].
 
-= Introduction =
 
-Add your content here.
 
-[http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
