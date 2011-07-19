@@ -17,7 +17,7 @@ namespace Restaurant.States.Ordering
         private void ConfirmOrder_Click(object sender, RoutedIdentifiedEventArgs e)
         {
             Session.Instance.NextStateForPerson(e.ClientId);
-            e.ClientVisualization.RemovePersonalizedView();
+            e.ClientId.PersonalizedView.Remove();
         }
     }
 }

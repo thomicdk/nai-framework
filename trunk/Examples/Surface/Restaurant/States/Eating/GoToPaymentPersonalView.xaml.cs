@@ -17,7 +17,7 @@ namespace Restaurant.States.Eating
         private void Checkout_Click(object sender, RoutedIdentifiedEventArgs e)
         {
             Session.Instance.NextStateForPerson(e.ClientId);
-            e.ClientVisualization.RemovePersonalizedView();
+            e.ClientId.PersonalizedView.Remove();
         }
     }
 }
