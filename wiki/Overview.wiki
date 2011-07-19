@@ -1,7 +1,7 @@
 #summary The general overview of the project.
 <wiki:toc max_depth="1" />
 = What is the NAI framework? =
-The NAI framework has been developed as part of the master thesis project by Michael Thomassen and Thomas Berglund, IT University of Copenhagen, Denmark, with [http://www.itu.dk/people/bardram/pmwiki/ Professor Jakob Bardram] as supervisor.
+The NAI framework has been developed as part of the master thesis by *Michael Thomassen* and *Thomas Berglund*, IT University of Copenhagen, Denmark, with [http://www.itu.dk/people/bardram/pmwiki/ Professor Jakob Bardram] as supervisor.
 The thesis is called: *N*on-*a*nonymous user *I*nteraction on tabletop displays.
 
 In general, contemporary tabletops do not have the ability to discriminate the touch of one
