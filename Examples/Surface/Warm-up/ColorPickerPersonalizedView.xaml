@@ -1,0 +1,32 @@
+﻿<StackPanel x:Class="WarmUp.ColorPickerPersonalizedView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:c="clr-namespace:NAI.UI.Controls;assembly=NAI"
+            
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Background="Transparent"
+            Margin="0"            
+            >  
+    <StackPanel.LayoutTransform>
+        <RotateTransform Angle="270" />        
+    </StackPanel.LayoutTransform>
+    <StackPanel.Resources>
+        <Style  x:Key="ButtonStyle2" TargetType="c:IdentifiedSurfaceButton">
+            <!--<Setter Property="MinHeight" Value="20px"/> 
+            <Setter Property="MaxWidth" Value="85px"/> -->
+        </Style>
+    </StackPanel.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <c:IdentifiedSurfaceButton Grid.Row="0"  x:Name="btnRed" Background="Red"  Style="{StaticResource ButtonStyle2}" IdentifiedClick="ColorChange_Identified_Click" />
+        <c:IdentifiedSurfaceButton Grid.Row="1" x:Name="btnGreen" Background="Green" Style="{StaticResource ButtonStyle2}" IdentifiedClick="ColorChange_Identified_Click"/>
+        <c:IdentifiedSurfaceButton Grid.Row="2" x:Name="btnOrange" Background="Orange"  Style="{StaticResource ButtonStyle2}" IdentifiedClick="ColorChange_Identified_Click"/>    
+    </Grid>
+</StackPanel>
