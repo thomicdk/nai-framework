@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+	<style name="NumberButtonBaseStyle" >
+		<item name="android:layout_width">90dip</item>
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:textSize">14pt</item>    
+	</style>
+    <style name="NumberButtonStyle" parent="NumberButtonBaseStyle">
+    	<item name="android:onClick">onNumberClick</item>
+    </style>
+    <style name="OkButtonStyle" parent="NumberButtonStyle">
+    	<item name="android:layout_width">270dip</item>
+    	<item name="android:gravity">center_horizontal</item>
+    	<item name="android:textColor">#FF00FF00</item>
+    	<item name="android:onClick">onOKClick</item>    	
+    </style>
+    <style name="DelButtonStyle" parent="NumberButtonStyle">
+    	<item name="android:layout_width">180dip</item>
+    	<item name="android:textColor">#FFFF0000</item> 
+    	<item name="android:onClick">onDelClick</item>   	
+    </style>
+    <style name="PinCodeVisual" parent="NumberButtonBaseStyle">
+    	<item name="android:layout_width">450dip</item>
+    	<item name="android:lines">1</item>
+    	<item name="android:editable">false</item>
+    	<item name="android:gravity">center_horizontal</item>
+    	<item name="android:textSize">15pt</item>
+    </style>
+    <string name="txtEnterPin">Enter PIN from surface</string>
+    <string name="pincodeActivityDialogNegativeButtonText">No</string>
+    <string name="pincodeActivityDialogPositiveButtonText">Yes</string>
+    <string name="pincodeActivityExitDialogTitle">Alert!</string>
+    <string name="pincodeActivityExitDialogMessage">Do you want to stop the application?</string>
+    <string name="pincodeActivityOptionsMenuItemExit">Exit</string>
+    
+</resources>

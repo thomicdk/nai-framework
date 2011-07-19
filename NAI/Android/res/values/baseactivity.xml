@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string name="baseActivityToastsConnected">Connected to tabletop</string>
+    <string name="baseActivityToastsConnectionLost">Connected to tabletop lost</string>
+</resources>

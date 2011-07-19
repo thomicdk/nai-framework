@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" android:orderingFromXml="true">
+    <PreferenceCategory android:title="Default server address">
+    	<EditTextPreference
+        	android:key="pref_server_ip"
+        	android:title="Server IP"
+        	android:summary="The default IP address"
+        	android:dialogTitle="Enter server IP"  />
+    	<EditTextPreference
+        	android:key="pref_server_port"
+        	android:title="Server port"
+        	android:summary="The default server port"
+        	android:dialogTitle="Enter server port"
+        	  android:defaultValue="8888"
+        	  android:numeric="integer" />
+    	<CheckBoxPreference
+    	 android:key="pref_server_addr_update"
+    	  android:summaryOff="Manually update" 
+    	  android:title="Dynamically update IP and port"
+    	   android:summaryOn="Automatically update" 
+    	   android:defaultValue="1"></CheckBoxPreference>
+    </PreferenceCategory>
+</PreferenceScreen>

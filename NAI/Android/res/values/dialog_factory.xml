@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="dialogFactoryUdpExceptionDialogError">Could not automatically connect to the tabletop.</string>
+	<string name="dialogFactoryUdpExceptionDialogGuidance">Press \'Set IP\' to set the network address manually.</string>
+	<string name="dialogFactoryUdpExceptionTitle">Connection failed!</string>
+	
+	<string name="dialogFactoryWaitingForConnection">Connecting to tabletop\nPlease wait...</string>
+	
+	<string name="dialogFactoryExitDialogQuestion">Do you wish to close this application?</string>
+	<string name="dialogFactoryExitDialogTitle">Warning!</string>
+	
+	<string name="dialogFactoryCalibrationDialogTitle">Confirmation</string>
+	<string name="dialogFactoryCalibrationDialogQuestion">Save calibration?</string>		
+</resources>

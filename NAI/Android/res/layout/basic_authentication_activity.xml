@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:paddingLeft="5dip" android:paddingRight="5dip">
+    <TextView android:layout_height="wrap_content" 
+    	android:layout_alignParentLeft="true" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/textView1"
+    	 android:text="@string/basicAuthenticationText" 
+    	 android:textSize="22dip"
+    	 android:paddingTop="10dip"
+    	 android:paddingBottom="10dip"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_below="@id/textView1" android:text="EditText" android:layout_width="fill_parent" android:id="@+id/etUserId"></EditText>
+    <TextView android:layout_height="wrap_content" android:text="'Joe' will be rejected by server" android:layout_below="@+id/etUserId" android:layout_width="wrap_content" android:id="@+id/textView2" android:layout_alignLeft="@+id/etUserId" android:layout_alignRight="@+id/etUserId"></TextView>
+    <Button style="@style/basicAuthenticationActivityButtonStyle" 
+    	android:layout_height="wrap_content" 
+    		android:onClick="onSubmitAuthentication" 
+    		android:layout_below="@+id/etUserId"
+    		 android:id="@+id/button1"
+    		  android:layout_alignRight="@+id/etUserId"
+    		   android:text="@string/basicAuthenticationSubmitButtonText"></Button>
+    <Button style="@style/basicAuthenticationActivityButtonStyle"
+    	 android:layout_height="wrap_content"    	
+     	android:onClick="onExitApplication"  
+     	 android:layout_toLeftOf="@+id/button1"
+     	  android:id="@+id/button2"
+     	   android:layout_alignTop="@+id/button1"
+     	    android:text="@string/basicAuthenticationExitButtonText"></Button>
+</RelativeLayout>
