@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NAI example 1</string>
+    
+    <string-array  name="user_ids">
+        <item>John</item>
+        <item>Alice</item>
+        <item>Bob</item>
+    </string-array>    
+</resources>
