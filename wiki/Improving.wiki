@@ -16,9 +16,11 @@ In addition to the list provided in the thesis some wild ideas could be interest
   * *Custom messages* Since there  exists a network connection between the smartphone and the tabletop, it is possible to implement it so that there can be send custom messages (really just array of bytes) between the two devices. A customisable handler can then decide what should happen to the message. This follows the OSI scheme of separating concerns by separating socket layer from message layer as documented in the thesis, chapter 5. 
 
 == Get started ==
-Here is what is necessary to do in order to get started on improving the two platforms.
+Here is what is necessary to do in order to get started on improving the two platforms in the NAI Framework.
 === The MS Surface code ==
 When the Surface code is checked out from trunk, you get a solution containing two projects:
 || *Title* || *Description* ||
 || NAI || The actual framework as a class library. The project in itself only compiles into a DLL and is hence not executeable ||
 || NAIDevelopment || A sparse test project which directly reference the NAI class library and is executeable. Useful for testing changes to the framework code ||
+
+The class  `DebugSettings` in the root of the NAI project can be used to turn console debugging on and off for different areas of the code.
