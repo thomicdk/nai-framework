@@ -11,11 +11,8 @@ import dk.itu.nai.ui.authentication.BasicAuthenticationActivity;
 public class BasicAuthenticationActivityHandler extends AuthenticationHandler {
 	private final String ME ="BasicAuthenticationActivityHandler"; 
 
-	//private BaseActivity context;
-
 	public BasicAuthenticationActivityHandler(BaseActivity context) {
 		super(context);
-		//this.context = context;
 	}
 		
 	@Override
@@ -48,16 +45,6 @@ public class BasicAuthenticationActivityHandler extends AuthenticationHandler {
 		Toast.makeText(context, "Authentication rejected", Toast.LENGTH_SHORT).show();
 		requestCredentials();
 	}
-	
-	/* Helper methods */
-		
-//	private void showCredentialsActivity()
-//	{
-//		Log.d(ME, "showCredentialsActivity");
-//		startActivityForResult(BasicAuthenticationActivity.class);
-		//Intent intent = new Intent(context, BasicAuthenticationActivity.class);
-		//this.context.startActivityForResult(intent,AuthenticationHandler.REQUEST_AUTHENTICATION_ACTIVITY);		
-//	}
 	
 	
 }
