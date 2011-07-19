@@ -1,9 +1,13 @@
 #summary The general overview of the project.
-
+<wiki:toc max_depth="1" />
 = What is the NAI Framework? =
 
 
 = Watch the video = 
+As a part of documenting the NAI framework, we have created a small video that illustrate the both the basic user experience and the pre-built UI components that are provided. 
+
+<wiki:video url="http://www.youtube.com/watch?v=H9n6vRNgNR8"/>
+
 
 = Read the thesis = 
 We strongly suggest you download and read through the thesis mentioned abowe. Especially chapter 3 will server as a good outset for understanding of the user experience as well as how to program with the framework.
@@ -20,11 +24,9 @@ The NAI framework have not been tested on other Android versions than 2.1 and 2.
 There is no guarantee that it will run on other types of hardware or Android verions.
 The smartphone 
 
-The Microsoft Surface 1.0 runs on Windows Vista
-
-== Microsoft Surface versions ==
-
-
+The NAI framework have been developed for the The Microsoft Surface 1.0. We soon there will be a Microsoft Surface 2.0 with different specifications and development environment. It is without the scope of this project targeting the comming version. 
+On the [http://www.surface.com Microsoft Surface homepage] they do promise to provide a migration tool that can transform MSS 1.0 projects to be used at the comming MSS 2.0. They also provide a complete SDK that is needed for development.
+   
 = The next step =
 The next step would be to download and set up a project for the Android smartphone and the Microsoft Surface so you can take the test applications for at spin.
 
@@ -32,11 +34,3 @@ More info at the wiki page [InstallAndRun Install and run the test applications]
 
 = Disclaimer =
 The code is provided as is. We cannot guarantee that we can support or maintain the code in the furture. However, if you would like to participate, or have some good ideas to how the framework can be improved please do not hesitate to contact the owners.
-
-
-
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
