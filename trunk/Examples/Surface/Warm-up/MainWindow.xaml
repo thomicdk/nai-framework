@@ -22,7 +22,7 @@
     </ControlTemplate>
     </s:SurfaceWindow.Resources>
 
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource WindowBackground}">
         <idc:IdentifiedInteractionArea>
             <Grid>
                 <Grid>
