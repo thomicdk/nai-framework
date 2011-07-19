@@ -1,0 +1,227 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76677F3F-E9C6-46FC-8CC7-7DB24A73DE21}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RootNamespace>Restaurant</RootNamespace>
+    <AssemblyName>Restaurant</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>winexe</OutputType>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationVersion>1.0.0.*</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>Publish\</PublishUrl>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAI, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NAI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.Surface" />
+    <Reference Include="Microsoft.Surface.Presentation" />
+    <Reference Include="Microsoft.Surface.Presentation.Generic" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\GenetivConverter.cs" />
+    <Compile Include="Common\TextOnPath\SineCurve.cs" />
+    <Compile Include="Common\TextOnPath\TextOnPathBase.cs" />
+    <Compile Include="Common\TextOnPath\TextOnPathControl.cs" />
+    <Compile Include="Common\TextOnPath\TextOnPathElement.cs" />
+    <Compile Include="Common\TextOnPath\TextOnPathVisuals.cs" />
+    <Compile Include="Common\TextOnPath\TextOnPathWarped.cs" />
+    <Compile Include="Model\Menu\Beverage.cs" />
+    <Compile Include="Model\Menu\Food.cs" />
+    <Compile Include="Model\Menu\Menu.cs" />
+    <Compile Include="Model\Menu\OrderableItem.cs" />
+    <Compile Include="Model\OrderLine.cs" />
+    <Compile Include="Model\OrderSummary.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Session.cs" />
+    <Compile Include="Model\StateMachineHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="lib\NAI.dll.config">
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="States\Checkout\Bill.xaml.cs">
+      <DependentUpon>Bill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Checkout\CheckoutView.xaml.cs">
+      <DependentUpon>CheckoutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Checkout\ConfirmPaymentPersonalView.xaml.cs">
+      <DependentUpon>ConfirmPaymentPersonalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Checkout\PrivateIdentifiedViewport.cs" />
+    <Compile Include="States\Eating\EatingView.xaml.cs">
+      <DependentUpon>EatingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Eating\GoToPaymentPersonalView.xaml.cs">
+      <DependentUpon>GoToPaymentPersonalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Final\FinishedView.xaml.cs">
+      <DependentUpon>FinishedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Ordering\ConfirmOrderPersonalView.xaml.cs">
+      <DependentUpon>ConfirmOrderPersonalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Ordering\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Ordering\OrderingView.xaml.cs">
+      <DependentUpon>OrderingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\Ordering\OrderSummary.xaml.cs">
+      <DependentUpon>OrderSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\NAI.dll" />
+    <Content Include="Resources\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\iconPreview.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\paper.jpg" />
+    <Resource Include="Resources\RestaurantBackground.jpg" />
+    <Resource Include="Resources\SecureLock.png" />
+    <Resource Include="Resources\Service_bottom.png" />
+    <Resource Include="Resources\Service_top.png" />
+    <Resource Include="Restaurant.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="States\Checkout\Bill.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Checkout\CheckoutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Checkout\ConfirmPaymentPersonalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Eating\EatingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Eating\GoToPaymentPersonalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Final\FinishedView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Ordering\ConfirmOrderPersonalView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Ordering\Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Ordering\OrderingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="States\Ordering\OrderSummary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
