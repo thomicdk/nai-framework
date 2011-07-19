@@ -63,6 +63,7 @@ namespace NAI.Client
         public virtual void OnGotTag(ClientTagVisualization visualization)
         {
             this.Visualization = visualization;
+            _session.ClientId.PersonalizedView = visualization;
         }
     }
 }

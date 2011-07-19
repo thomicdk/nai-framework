@@ -10,10 +10,10 @@ namespace NAI.UI.Controls
     /// <summary>
     /// Interface used when raising events
     /// </summary>
-    public interface PersonalizedView
+    public interface IPersonalizedView
     {
-        void AddPersonalizedView(UIElement view);
+        void Add(UIElement view);
 
-        void RemovePersonalizedView();
+        void Remove();
     }
 }
