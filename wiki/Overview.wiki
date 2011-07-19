@@ -1,12 +1,40 @@
-#summary One-sentence summary of this page.
+#summary The general overview of the project.
 
-= Introduction =
+= What is the NAI Framework? =
 
-Add your content here.
 
-[http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
+= Watch the video = 
 
-= Details =
+= Read the thesis = 
+We strongly suggest you download and read through the thesis mentioned abowe. Especially chapter 3 will server as a good outset for understanding of the user experience as well as how to program with the framework.
+
+The thesis can be downloaded from the homepage for [http://pit.itu.dk The Pervasive Interaction Technology Lab, IT University of Copenhagen, Denmark].
+Direct link: [http://www.itu.dk/pit/?n=Projects.NonAnnTabletop] 
+
+= Requirements = 
+The NAI framework has been built for to specific hardware components
+* Smartphone running Android 2.1 or later
+* Microsoft Surface 1.0  
+
+The NAI framework have not been tested on other Android versions than 2.1 and 2.2. However, it should operate on later version of the software stack as well. During development we used HTC Desire with Android 2.2, HTC Legend with Android 2.1. 
+There is no guarantee that it will run on other types of hardware or Android verions.
+The smartphone 
+
+The Microsoft Surface 1.0 runs on Windows Vista
+
+== Microsoft Surface versions ==
+
+
+= The next step =
+The next step would be to download and set up a project for the Android smartphone and the Microsoft Surface so you can take the test applications for at spin.
+
+More info at the wiki page [InstallAndRun Install and run the test applications].
+
+= Disclaimer =
+The code is provided as is. We cannot guarantee that we can support or maintain the code in the furture. However, if you would like to participate, or have some good ideas to how the framework can be improved please do not hesitate to contact the owners.
+
+
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
