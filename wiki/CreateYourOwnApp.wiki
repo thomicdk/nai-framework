@@ -1,14 +1,18 @@
-#summary One-sentence summary of this page.
+#summary How to setup your project to use the NAI framework
 #sidebar TableOfContents
-= Introduction =
+<wiki:toc max_depth="2" />
+=Create you own applications=
+Before you start developing your own appliocation using the NAI framework, we recommend that you read through the design guidelines below. As documented in the thesis (see [Overview]), chapter 7, Evaluation, it does matter _how_ you design the application.
+==Design guidelines==
+The list below is taken directly from the thesis, and may be difficult to understand when taken out of context. Please read through the thesis, if you find it difficult to understand.
 
-Add your content here.
+  # *List of choices* When having a list of choices (like a restaurant menu), it should be very easy to see what item you are choosing with using the smartphone. The small displacement caused by the height difference between the surface display and the smartphone screen may make it dificult to distinguish the individual list items from each other if not designed correctly.
+  # *Visual clues* For the user it is dicult to know when a _PersonalizedView_ emerges. Some visual clue indicating where to put the phone to get the view is important. The same goes for the IdentifiedViewport control.
+  # *Screen real estate* Balance the number of objects on the tabletop with the interaction area of the tabletop surface. There needs to be enough room for the phone(s) to operate, as well as for other interaction to happen.
+  # *Lessen the movements* Lessen the number of times the phone should be moved. Users care about their phone, and do not like to slide it along the surface, and get tired of lifting the phone from place to place. For example, a solution could be to allow users to order items from a restaurant menu via normal finger touch on the tabletop, but submit the order items by using the phone. Another scenario could be to place the phone at a certain spot, and then drag items to the phone via normal touch on the tabletop. 
+  # *Unintended touch* When people move their phone across the tabletop screen, they may unintendedly touch the surface display underneath with their ngers. A thin smartphone increases the chance, because it is more dicult to grab. The problem may be minimised by UI design, if not all visual elements are made moveable and touchable by normal touch input.
 
-[http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+==Setup up a project an android project for Eclipse==
+==Setting up a project for Microsoft Surface for Visual Studio==
