@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="basicAuthenticationText">Please enter your basic credentials:</string>
+    <string name="basicAuthenticationSubmitButtonText">Authenticate</string>
+    <string name="basicAuthenticationExitButtonText">Exit</string>
+    <style name="basicAuthenticationActivityButtonStyle">
+    	<item  name="android:layout_width">125dip</item>
+    </style>
+</resources>
