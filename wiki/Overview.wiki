@@ -1,16 +1,29 @@
 #summary The general overview of the project.
 <wiki:toc max_depth="1" />
-= What is the NAI Framework? =
+= What is the NAI framework? =
+The NAI framework has been developed as part of the master thesis project by Michael Thomassen and Thomas Berglund, IT University of Copenhagen, Denmark, with [http://www.itu.dk/people/bardram/pmwiki/ Professor Jakob Bardram] as supervisor.
+The thesis is called: *N*on-*a*nonymous user *I*nteraction on tabletop displays.
 
+In general, contemporary tabletops do not have the ability to discriminate the touch of one
+ user from the touch of another. This framework solves this, and therefore adds support for
+  non-anonymous user interaction to tabletop displays. 
+It allows developers to build applications for Microsoft Surface that have access to the identity of the user carrying out an action.
+
+For a developer, this basically means that the framework provides a set of _UI Controls_ and a set of _Identfied Events_.
+
+The UI controls are pre-built to show how to build you own controls and to help leverage development of applications.
+
+The events are really _normal_ touch and hover events, but in addition the conventional information, the event arguments also contain the identity of the user causing the event.
 
 = Watch the video = 
-As a part of documenting the NAI framework, we have created a small video that illustrate the both the basic user experience and the pre-built UI components that are provided. 
+One picture says more that a thousand words. We have a whole video documenting the NAI framework.
+
+The video illustrate both the basic user experience and the pre-built UI components that are provided. 
 
 <wiki:video url="http://www.youtube.com/watch?v=H9n6vRNgNR8"/>
 
-
 = Read the thesis = 
-We strongly suggest you download and read through the thesis mentioned abowe. Especially chapter 3 will server as a good outset for understanding of the user experience as well as how to program with the framework.
+We strongly suggest you download and read through the thesis mentioned abowe. Especially chapter 3 will serve as a good outset for get at picture of the user experience and as how to program you own application using the framework.
 
 The thesis can be downloaded from the homepage for [http://pit.itu.dk The Pervasive Interaction Technology Lab, IT University of Copenhagen, Denmark].
 Direct link: [http://www.itu.dk/pit/?n=Projects.NonAnnTabletop] 
@@ -33,4 +46,4 @@ The next step would be to download and set up a project for the Android smartpho
 More info at the wiki page [InstallAndRun Install and run the test applications].
 
 = Disclaimer =
-The code is provided as is. We cannot guarantee that we can support or maintain the code in the furture. However, if you would like to participate, or have some good ideas to how the framework can be improved please do not hesitate to contact the owners.
+The code is provided as is. We cannot guarantee that we can support or maintain the code in the furture. However, if you would like to participate, and have some good ideas to how the framework can be improved please do not hesitate to contact us.
