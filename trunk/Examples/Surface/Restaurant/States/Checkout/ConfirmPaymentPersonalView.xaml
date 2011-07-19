@@ -1,0 +1,31 @@
+﻿<s:SurfaceUserControl x:Class="Restaurant.States.Checkout.ConfirmPaymentPersonalView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:id="clr-namespace:NAI.UI.Controls;assembly=NAI">
+    <s:SurfaceUserControl.Resources>
+        <ObjectDataProvider x:Key="Owner" />
+    </s:SurfaceUserControl.Resources>
+    
+    <Grid Margin="5" DataContext="{StaticResource Owner}">
+        <Grid.Resources>
+            <Style TargetType="TextBlock" x:Key="TextStyle">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Foreground" Value="Black" />
+            </Style>
+            <Style TargetType="id:IdentifiedSurfaceButton" x:Key="ButtonTextStyle">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Background" Value="GoldenRod" />
+            </Style>
+        </Grid.Resources>
+        
+        <Border CornerRadius="10" Background="WhiteSmoke" BorderThickness="1" BorderBrush="Black">
+            <StackPanel Margin="5">
+                <TextBlock Style="{StaticResource TextStyle}" Margin="0,0,0,5" HorizontalAlignment="Center" Text="{Binding PaymentAmount, StringFormat=Amount: {0} kr.}" />
+                <id:IdentifiedSurfaceButton Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ButtonTextStyle}" IdentifiedClick="Pay_Click">Pay</id:IdentifiedSurfaceButton>
+            </StackPanel>
+        </Border>
+    </Grid>
+</s:SurfaceUserControl>

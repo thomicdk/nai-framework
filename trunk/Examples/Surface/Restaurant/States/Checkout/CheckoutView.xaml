@@ -1,0 +1,16 @@
+﻿<s:ScatterView x:Class="Restaurant.States.Checkout.CheckoutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:check="clr-namespace:Restaurant.States.Checkout"
+    xmlns:id="clr-namespace:NAI.UI.Controls;assembly=NAI">
+    
+   <!-- <s:ScatterView.ItemTemplate>
+        <DataTemplate DataType="Person">
+            <check:Bill Owner="{Binding}" />            
+        </DataTemplate>
+    </s:ScatterView.ItemTemplate> -->
+    
+    
+    
+</s:ScatterView>

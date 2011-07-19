@@ -1,0 +1,24 @@
+﻿<s:SurfaceUserControl x:Class="Restaurant.States.Ordering.ConfirmOrderPersonalView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:id="clr-namespace:NAI.UI.Controls;assembly=NAI">
+    <Grid Margin="5">
+        <Grid.Resources>
+            <Style TargetType="TextBlock" x:Key="TextStyle">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontWeight" Value="Bold" />
+            </Style>
+            <Style TargetType="id:IdentifiedSurfaceButton" x:Key="ButtonTextStyle">
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Foreground" Value="WhiteSmoke" />
+                <Setter Property="Background" Value="DarkRed" />
+            </Style>
+        </Grid.Resources>
+        
+        <Border CornerRadius="10" Background="WhiteSmoke" BorderThickness="1" BorderBrush="Black">
+                <id:IdentifiedSurfaceButton Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ButtonTextStyle}" IdentifiedClick="ConfirmOrder_Click">Confirm Order</id:IdentifiedSurfaceButton>
+        </Border>
+    </Grid>
+</s:SurfaceUserControl>
