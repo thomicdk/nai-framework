@@ -46,4 +46,4 @@ The next step would be to download and set up a project for the Android smartpho
 More info at the wiki page [InstallAndRun Install and run the test applications].
 
 = Disclaimer =
-The code is provided as is. Unfortunately, we cannot guarantee that we can support or maintain the code. Not now, not in the future. However, if you would like to participate, and have some good ideas to how the framework can be improved please do not hesitate to contact us. You might want to read our suggestions on [Improving future work].
+The code is provided as is. Unfortunately, we cannot guarantee that we can support or maintain the code. Not now, not in the future. However, if you would like to participate, and have some good ideas to how the framework can be improved please do not hesitate to contact us. You might want to read our suggestions on [Improving future work] first.
