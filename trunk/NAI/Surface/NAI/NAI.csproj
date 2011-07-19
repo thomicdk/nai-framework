@@ -150,7 +150,7 @@
     </Compile>
     <Compile Include="UI\Controls\IdentifiedInteractionArea.cs" />
     <Compile Include="UI\Controls\IdentifiedViewport.cs" />
-    <Compile Include="UI\Controls\PersonalizedView.cs" />
+    <Compile Include="UI\Controls\IPersonalizedView.cs" />
     <Compile Include="UI\Client\StreamingRectangleUserControl.xaml.cs">
       <DependentUpon>StreamingRectangleUserControl.xaml</DependentUpon>
     </Compile>

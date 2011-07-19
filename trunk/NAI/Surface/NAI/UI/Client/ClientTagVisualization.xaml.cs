@@ -19,7 +19,7 @@ namespace NAI.UI.Client
     /// <summary>
     /// Interaction logic for ClientTagVisualization.xaml
     /// </summary>
-    internal partial class ClientTagVisualization : TagVisualization, PersonalizedView
+    internal partial class ClientTagVisualization : TagVisualization, IPersonalizedView
     {
 
         internal ClientSession ClientSession { get; set; }
@@ -156,6 +156,7 @@ namespace NAI.UI.Client
                 this.ContentContainer.UpdateLayout();
                 if (ClientSession != null && ClientSession.State is StreamingState)
                 {
+                    
                     // Perform hit testing to raise LensOver events
                     HitTestArea();
                 }
@@ -241,6 +242,7 @@ namespace NAI.UI.Client
         /// <param name="bubblingEvent">The Bubble event to raise after the Tunnel event</param>
         private void RaiseEventPair(UIElement target, RoutedEvent bubblingEvent, RoutedIdentifiedEventArgs e)
         {
+            Debug.WriteLineIf(DebugSettings.DEBUG_EVENTS, "Raising "+e.RoutedEvent+"  on " + target + ". Name: " + (target is FrameworkElement ? ((FrameworkElement)target).Name : "?"));
             target.RaiseEvent(e);
             e.RoutedEvent = bubblingEvent;
             target.RaiseEvent(e);
@@ -620,7 +622,7 @@ namespace NAI.UI.Client
 
         #region PersonalizedView Members
 
-        public void AddPersonalizedView(UIElement view)
+        public void Add(UIElement view)
         {
             if (ClientSession.State is StreamingState && MyContent is StreamingRectangleUserControl)
             {
@@ -628,7 +630,7 @@ namespace NAI.UI.Client
             }
         }
 
-        public void RemovePersonalizedView()
+        public void Remove()
         {
             if (ClientSession.State is StreamingState && MyContent is StreamingRectangleUserControl)
             {

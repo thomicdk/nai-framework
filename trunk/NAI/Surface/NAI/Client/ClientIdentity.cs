@@ -9,7 +9,7 @@ namespace NAI.Client
     {
         public TagData TagData { get; internal set; }
         public ClientCredentials Credentials { get; internal set; }
-        public PersonalizedView PersonalizedView { get; internal set; }
+        public IPersonalizedView PersonalizedView { get; internal set; }
 
         internal ClientIdentity() { }
 

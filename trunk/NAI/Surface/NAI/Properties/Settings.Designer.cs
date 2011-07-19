@@ -43,15 +43,6 @@ namespace NAI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool LoadAndSaveCalibrations {
-            get {
-                return ((bool)(this["LoadAndSaveCalibrations"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("CN=Test Certificate, O=ITU, E=mtho@itu.dk, L=Copenhagen, C=DK")]
         public string ServerCertificateSubject {
             get {
@@ -83,6 +74,15 @@ namespace NAI.Properties {
         public string UdpCallSign {
             get {
                 return ((string)(this["UdpCallSign"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool LoadAndSaveCalibrations {
+            get {
+                return ((bool)(this["LoadAndSaveCalibrations"]));
             }
         }
     }

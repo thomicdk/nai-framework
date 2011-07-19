@@ -41,7 +41,6 @@ namespace NAIDevelopment
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-
             // Remove handlers for Application activation events
             RemoveActivationHandlers();
         }
@@ -86,7 +85,6 @@ namespace NAIDevelopment
         private void OnApplicationPreviewed(object sender, EventArgs e)
         {
             //TODO: Disable audio here if it is enabled
-
             //TODO: optionally enable animations here
         }
 

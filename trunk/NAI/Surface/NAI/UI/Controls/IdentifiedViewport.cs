@@ -11,6 +11,7 @@ using NAI.UI.Helpers;
 using System.Windows;
 using NAI.Client.Streaming;
 
+
 namespace NAI.UI.Controls
 {
     public class IdentifiedViewport : Canvas
@@ -35,8 +36,8 @@ namespace NAI.UI.Controls
 
         #region Private members
 
-        private Path _viewportShape;
-        private Path _viewportShapeCopyTransparent;
+        private Path _viewportShape; // _viewportShape
+        private Path _viewportShapeCopyTransparent; // _viewportShapeCopyTransparent
         private CombinedGeometry _viewportGeometry;
         private GeometryGroup _clientScreenRectangles;
 
@@ -64,9 +65,11 @@ namespace NAI.UI.Controls
         private void InitializeLayout()
         {
             _viewportShapeCopyTransparent = new Path();
+            _viewportShapeCopyTransparent.Name = "viewportShapeCopyTransparent";
             _viewportShapeCopyTransparent.Fill = Brushes.Transparent;
 
             _viewportShape = new Path();
+            _viewportShape.Name = "viewportShape";
             _viewportShape.Fill = Brushes.White;
 
             _viewportGeometry = new CombinedGeometry();
@@ -75,8 +78,8 @@ namespace NAI.UI.Controls
             _viewportGeometry.Geometry2 = _clientScreenRectangles;
             _viewportShape.Data = _viewportGeometry;
 
-            this.Children.Add(_viewportShape);
             this.Children.Add(_viewportShapeCopyTransparent);
+            this.Children.Add(_viewportShape);
         }
 
         private void InitializeEventHandlers()
@@ -145,8 +148,7 @@ namespace NAI.UI.Controls
 
         private void OnHoverOver(object sender, RoutedIdentifiedHoverEventArgs e)
         {
-
-            if (e.OriginalSource.Equals(_viewportShape)) 
+            if (e.Source.Equals(_viewportShape)) 
             {
                 if (FilterDelegate(e))
                 {
@@ -162,7 +164,7 @@ namespace NAI.UI.Controls
         private void OnHoverOut(object sender, RoutedIdentifiedHoverEventArgs e)
         {
             if (!UIHelper.StreamingClientsOverUIElement(this._viewportShapeCopyTransparent).Contains(e.ClientId) ||
-                e.OriginalSource.Equals(_viewportShapeCopyTransparent))
+                e.Source.Equals(_viewportShapeCopyTransparent))
             {
                 RemoveScreenRectangle(e.ClientId);
             }
