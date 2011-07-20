@@ -31,4 +31,4 @@ Make sure the Android project is targeted min. SDK 7, or Android 2.1-update. Ear
 
 Enable the Wi-Fi connection, and connect the smartphone to the same router as the tabeltop if you will take advantage of the automatic lookup service built into the NAI framework.
 
-If you get an error that the project is set up as a library, you need to right click the project folder and choose _Properties_. In the new window you click _Android_ and tick off the flag indicating that the project is a library. The you connect the phone, and start the project. 
+If you get an error that the project is set up as a library, you need to right click the project folder and choose _Properties_. In the new window you click _Android_ and tick off the flag indicating that the project is a library. Then you connect the phone, and start up the application. 
