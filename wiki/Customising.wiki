@@ -98,3 +98,49 @@ namespace NAITest.CustomAuthentication
     }
 }
 }}}
+
+=Android=
+
+
+==Changing settings==
+Of the settings you can change the most important are 'app_name' and 'server_udp_id_token'. The latter controls the token that is used to find the tabletop. 
+
+The text used in the application can be altered her. Check the value folder for of the NAI project. You can override all the string values by defining the in you own project. This way you can localise the language or target the purpose for different applications.
+
+Most important string values:
+  *'app_name' Override the default application name.
+  * 'server_udp_id_token' Overrides the default token used to the automatic connection setup. This value must mach the corresponding setting on the 
+
+
+==Customising authentication==
+How you customise the authentication mechanism, and setting custom credentials are explained in section 3.3, Setup, of the thesis mentioned at wiki page [Overview], and will therefore not be covered here.
+
+However, you can download an sample application that customises the UI part of the authentication as described in wiki page [InstallAndRun Install and run the demo applications]. 
+
+===Accepting server certificates====
+By default the NAI framework for the Android smartphone accept all server certificates. If you for some reason would like to take control over the acceptance you need to implement you own trust manager.
+
+You do that by referencing you own 'TrustManager' in the constructor of your default Activity:
+{{{
+...
+public class Main extends BaseActivity {    
+	 public Main() {
+		AuthenticationConfiguration.getInstance()
+			.setTrustManager(new TrustManager[]{
+				    new X509TrustManager() {
+				        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+				            ...
+				        }
+				        public void checkClientTrusted(
+				            ... {
+				        }
+				        public void checkServerTrusted(
+				            ... {
+				        }
+				    }} 				
+		);		
+	 }   
+}
+}}} 
+
+It is out of scope to provide a guide for implementing your own 'TrustManager'. We recommend that you read [http://download.oracle.com/javase/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#TrustManager Java Secure Socket Extension (JSSE) - Reference Guide].
