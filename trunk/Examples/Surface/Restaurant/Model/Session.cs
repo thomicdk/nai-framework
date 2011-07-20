@@ -33,18 +33,6 @@ namespace Restaurant.Model
             GlobalState = States.Ordering;
             Persons = new ObservableCollection<Person>();
             OrderLines = new List<OrderLine>();
-
-
-            // Test
-            //Persons.Add(new Person(new ClientIdentity() { Credentials = new BasicClientCredentials("Michael") }));
-            //Persons.Add(new Person(new ClientIdentity() { Credentials = new BasicClientCredentials("Thomas") }));
-
-            //OrderLines.Add(new OrderLine(Persons[0], Menu.Menu.Items[0]));
-            //OrderLines.Add(new OrderLine(Persons[0], Menu.Menu.Items[3]));
-            //OrderLines.Add(new OrderLine(Persons[1], Menu.Menu.Items[4]));
-            //OrderLines.Add(new OrderLine(Persons[1], Menu.Menu.Items[1]));
-
-
         }
         #endregion
 

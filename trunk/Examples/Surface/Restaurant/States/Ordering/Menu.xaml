@@ -62,7 +62,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Style="{StaticResource HeadlineTextStyle}">Food</TextBlock>    
-                <Image Grid.Column="1" Source="/SecureTouch;component/Resources/SecureLock.png" Margin="0 0 28 0" HorizontalAlignment="Right" Height="20"></Image>
+                <Image Grid.Column="1" Source="/Restaurant;component/Resources/SecureLock.png" Margin="0 0 28 0" HorizontalAlignment="Right" Height="20"></Image>
             </Grid>
             
             <ItemsControl  
@@ -75,7 +75,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Style="{StaticResource HeadlineTextStyle}">Beverage</TextBlock>
-                <Image Grid.Column="1" Source="/SecureTouch;component/Resources/SecureLock.png" Margin="0 0 28 0" HorizontalAlignment="Right" Height="20"></Image>
+                <Image Grid.Column="1" Source="/Restaurant;component/Resources/SecureLock.png" Margin="0 0 28 0" HorizontalAlignment="Right" Height="20"></Image>
             </Grid>
             <ItemsControl  
                 Name="Beverage" 
