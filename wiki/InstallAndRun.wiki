@@ -2,16 +2,18 @@
 #sidebar TableOfContents
 <wiki:toc max_depth="1" />
 = Introduction =
-The code base includes a number of example applications. For MS Surface, there are two applications which utilize non-anonymous user interaction. For Android there are two ways of installing the maching default application.
+The code base includes a number of example applications. For MS Surface, there are two applications which utilize non-anonymous user interaction. For Android there are two ways of installing the matching default application.
 How to install and run the three applications are described in the following.
 
-It is required that you can download source code and set up a project in Visual Studio as well as in Eclipse. It is not covered here.
-
-
 = MS Surface =
-There are two example applications available for the MS Surface, "Warm-up" and "Restaurant". They have been used during conduction of a user evaluation as part of the thesis writing.
+There are two example applications available for the MS Surface, "Warm-up" and "Restaurant". They have been used during conduction of a user evaluation as part of the thesis writing. They both use the default user authentication mechanism in the NAI framework.
 
-Both applications are ready to run once compiled. They both use the default user authentication mechanism in the NAI framework. 
+Both applications can be checked out from this part of the SVN repository: [http://code.google.com/p/nai-framework/svn/trunk/Examples/Surface]
+You can also download a binary version here:
+  * Warm-up
+  * Restaurant
+
+Both applications include a config file where you must specify the X509 certificate subject required for the secure communication between the tabletop and smartphone.
 
 == Warm-up ==
 This application demonstrates some of the features in the NAI Framework. The screenshot below shows the application running with three smartphone clients.
