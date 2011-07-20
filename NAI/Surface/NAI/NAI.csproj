@@ -128,7 +128,7 @@
     <Compile Include="Communication\SocketLayer\ISocketLayerOutgoing.cs" />
     <Compile Include="Communication\SocketLayer\SocketCommunication.cs" />
     <Compile Include="DebugSettings.cs" />
-    <Compile Include="RuntimeSettings.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\ClientDataStorage.cs" />
     <Compile Include="UI\Client\CalibrationUserControl.xaml.cs">

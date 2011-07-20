@@ -33,10 +33,21 @@ namespace WarmUp
         /// </summary>
         public MainWindow()
         {
+            SetupNaiFramework();
             InitializeComponent();
+
 
             // Add handlers for Application activation events
             AddActivationHandlers();
+
+
+        }
+
+        private void SetupNaiFramework()
+        {
+            NAI.Properties.Settings.LoadAndSaveCalibrations = true;
+            NAI.Properties.Settings.ServerCertificateSubject = "CN=Test Certificate, O=ITU, E=mtho@itu.dk, L=Copenhagen, C=DK";
+            NAI.Properties.Settings.SimulatorMode = true;
         }
 
         #region event handlers
