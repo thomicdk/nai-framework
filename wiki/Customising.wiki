@@ -119,7 +119,7 @@ You can download an sample application that customises the UI part of the authen
 
 Below follow a small example that shows how to implement that part of the  authentication handler that creates the credentials message, as well as how the specialisation of 'ClientCredentials' that is needed.
 
-Except from an authentication handler that get user id as well as passwork from an Activity:
+Excerpt from an authentication handler that get user name as well as password from an Activity:
 {{{
 public class UsernamePasswordAuthenticationHandler extends AuthenticationHandler {
 
@@ -146,8 +146,37 @@ public class UsernamePasswordAuthenticationHandler extends AuthenticationHandler
 The 'UsernamePasswordClientCredentials' could then be implemented like this:
 
 {{{
+...
+public class UsernamePasswordClientCredentials extends ClientCredentials
+{
+  private String password;
+	
+  public UsernamePasswordClientCredentials(String username,String password ) {
+    super(username);
+    this.password = password;
+  }
+	
+  @Override
+  public byte[] toByteArray() {		
+    try {
+      byte[] usernameBytes = getUserId().trim().getBytes("UTF-8");
+      byte[] passwordBytes = this.password.trim().getBytes("UTF-8");
+			
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      DataOutputStream dos = new DataOutputStream(baos);
 
-
+      dos.writeInt(usernameBytes.length);
+      dos.write(usernameBytes);
+		
+      dos.writeInt(passwordBytes.length);
+      dos.write(passwordBytes);
+      return baos.toByteArray();
+    } catch (UnsupportedEncodingException e) {
+      return null;
+    } catch (IOException ignore) {}		
+      return null;		
+  }
+}
 
 }}}
 
