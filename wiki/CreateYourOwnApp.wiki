@@ -49,7 +49,7 @@ Most important string values:
   *'app_name' Override the default application name.
   * 'server_udp_id_token' Overrides the default token used to the automatic connection setup. This value must mach the corresponding setting on the 
 
-===Example application===
+===Sample application===
 You can download a sample appplication that changes the UI of the authentication mechanism.
 
 You get the source here: [http://code.google.com/p/nai-framework/svn/trunk/Examples/Android/CustomAuthenticationUI].
