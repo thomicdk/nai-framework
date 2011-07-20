@@ -7,9 +7,18 @@ Add your content here.
 
 [http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
 
-= Details =
+= MS Surface =
+There are a number of settings available for the developer to adjust the behaviour of the NAI framework. 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
+
+|| *Name* || *.NET type* || *Default value* || *Description* ||
+|| AuthenticationHandler || `NAI.Client.Authentication.IAuthenticationHandler` || `NAI.Client.Authentication.BasicAuthenticationHandler` || The user authentication mechanism used to authenticate smartphone users. It must be compatible with the authentication mechanism running on the smartphone. ||
+|| LoadCalibrations || `bool` || `true`|| Indicates whether smartphone calibrations are loaded at application startup. Calibrations are loaded if either `LoadCalibrations` or `LoadAndSaveCalibrations` are set to `true` ||
+|| LoadAndSaveCalibrations || `bool` || `true` || Indicates whether smartphone calibrations are loaded at application startup, and new calibrations are saved. Calibrations are loaded if either `LoadCalibrations` or `LoadAndSaveCalibrations`` are set to `true` ||
+|| ServerCertificateSubject || `string` || `string.Empty` || The smartphones and tabletop communicate via a SSL connection. This requires the tabletop to have a SSL certificate installed in the local keystore. This setting specifies the X509 subject of the certificate which the framework uses to search for the certificate in the local keystore. The default value of this setting implies that it must be changed. ||
+|| SimulatorMode || `bool` || `false` || This setting is used to indicate whether the application runs in simulator mode. This is important because of the screenshot mechanism in the framework. ||
+|| SimulatorOriginOffset || `System.Drawing.Point` || `(25,101)` || If the `SimulatorMode` is set to `true`, then this setting is used to specify the offset from the top left corner of the screen to the top left point of the simulator screen.  ||
+|| StreamingFrameRate || `int` || 15 || The rate at which screenshots are captured and sent to smartphone clients ||
+|| TabletopScreen || `System.Windows.Forms.Screen` || `System.Windows.Forms.Screen.PrimaryScreen` || If the tabletop computer has several monitors attached, this setting is used to specify which monitor is the tabletop. ||
+|| UdpToken || `string` || `NAIServer` || The call sign used in the automatic socket connection establishment. This value must be the same on both the smartphone and tabletop ||
