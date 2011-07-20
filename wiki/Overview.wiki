@@ -17,9 +17,9 @@ The events are really _normal_ touch and hover events, but in addition to the co
 For a better understanding and a more detailed explanation we encourage you to watch a small presentation video, and read the thesis (especially chapter 3 and 5).
 
 = Watch the video = 
-We have created a small video documenting the NAI framework.
+We have created a small video which demonstrates the features the NAI framework.
 
-The video illustrate both the user experience as well as features of the framework. 
+The video illustrates both the user experience as well as features of the framework. 
 
 <wiki:video url="http://www.youtube.com/watch?v=H9n6vRNgNR8"/>
 
