@@ -113,9 +113,45 @@ Most important string values:
 
 
 ==Customising authentication==
-How you customise the authentication mechanism, and setting custom credentials are explained in section 3.3, Setup, of the thesis mentioned at wiki page [Overview], and will therefore not be covered here.
+How you customise the authentication mechanism, and setting custom credentials are explained in section 3.3, Setup, of the thesis mentioned at wiki page [Overview].
 
-However, you can download an sample application that customises the UI part of the authentication as described in wiki page [InstallAndRun Install and run the demo applications]. 
+You can download an sample application that customises the UI part of the authentication as described in wiki page [InstallAndRun Install and run the demo applications]. 
+
+Below follow a small example that shows how to implement that part of the  authentication handler that creates the credentials message, as well as how the specialisation of 'ClientCredentials' that is needed.
+
+Except from an authentication handler that get user id as well as passwork from an Activity:
+{{{
+public class UsernamePasswordAuthenticationHandler extends AuthenticationHandler {
+
+  public UsernamePasswordAuthenticationHandler(BaseActivity context) {
+    super(context);
+  }
+
+  @Override
+  public ClientCredentials onActivityResult(int resultCode, Intent data){
+    if (resultCode == Activity.RESULT_OK){
+      String username =  data.getExtras().getString(UsernamePasswordAuthenticationActivity.INTENT_EXTRA_USERNAME);
+      String password = data.getExtras().getString(UsernamePasswordAuthenticationActivity.INTENT_EXTRA_PASSWORD);
+      if (username != null &&  username.length() > 0 &&
+          password != null && password.length() > 0)
+	  return new UsernamePasswordClientCredentials(username,password);
+      // Fall back - close the application.
+      context.finish();
+      return null;
+  }
+...
+}
+}}}
+
+The 'UsernamePasswordClientCredentials' could then be implemented like this:
+
+{{{
+
+
+
+}}}
+
+
 
 ===Accepting server certificates====
 By default the NAI framework for the Android smartphone accept all server certificates. If you for some reason would like to take control over the acceptance you need to implement you own trust manager.
