@@ -41,11 +41,11 @@ public partial class MainWindow : SurfaceWindow
 
 == Customising user authentication ==
 To implement a customised user authentication mechanism you have to do three things.
-# Implement a specialization of `NAI.Client.Authentication.ClientCredentials`.
-# Implement the interface `IAuthenticationHandler`.
-# Plug in the authentication mechanism to the framework.
+  # Implement a specialization of `NAI.Client.Authentication.ClientCredentials`.
+  # Implement the interface `NAI.Client.Authentication.IAuthenticationHandler`.
+  # Plug in the authentication mechanism to the framework (see section above).
 
-Below is an example of how to implement the two first steps:
+Below is an example of how to implement the two first steps in an authentication mechanism requiring username and password:
 {{{
 using System.Collections.Generic;
 using System.IO;
