@@ -8,7 +8,6 @@ The code includes a number of test application. On that MS Surface, there are tw
 There are two example application available for the MS Surface, "Warm-up" and "Restaurant". They have been used during conduction of a user evaluation as part of the thesis writing.
 
 == Warm-up ==
-It uses default authentication
+This application demonstrates some of the UI features in the NAI Framework. The screenshot below shows the application running with three smartphone clients.
 
-
-
+[http://nai-framework.googlecode.com/svn/wiki/images/warm-up.jpg]
