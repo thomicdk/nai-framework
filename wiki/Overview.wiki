@@ -14,7 +14,7 @@ The UI controls are pre-built to show how to build you own controls and to help 
 
 The events are really _normal_ touch and hover events, but in addition to the conventional information, the event arguments also contain the identity of the user causing the event. Because the presence of the user is relevant the framework also support _person events_.
 
-For a better understanding and a more detailed explanation we encourage you to watch a small presentation video, and read the thesis (especially chapter 3 and 5).
+For a better understanding and a more detailed explanation we encourage you to watch a small presentation video, and read the thesis (especially chapter 3).
 
 = Watch the video = 
 We have created a small video which demonstrates the features the NAI framework.
