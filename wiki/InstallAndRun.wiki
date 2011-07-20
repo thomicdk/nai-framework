@@ -17,4 +17,4 @@ This application demonstrates some of the features in the NAI Framework. The scr
 == Restaurant ==
 The application is an order and payment system for the restaurant of the future. It is an example of deployment of the NAI framework in a familiar and realistic scenario. The screenshot below shows the first state of the application, where two restaurant guests order food and beverages with their smartphones.
 
-[http://nai-framework.googlecode.com/svn/wiki/images/warm-up.jpg]
+[http://nai-framework.googlecode.com/svn/wiki/images/restaurant.jpg]
