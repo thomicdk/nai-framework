@@ -52,6 +52,33 @@ Most important string values:
 ===Customising authentication===
 How you customise the authentication mechanism, and setting custom credentials are explained in section 3.3, Setup, of the thesis mentioned at wiki page [Overview], and will therefore not be covered here.
 
+===Accepting server certificates====
+By default the NAI framework for the Android smartphone accept all server certificates. If you for some reason would like to take control over the acceptance you need to implement you own trust manager.
+
+You do that by referencing you own 'TrustManager' in the constructor of your default Activity:
+{{{
+...
+public class Main extends BaseActivity {    
+	 public Main() {
+		AuthenticationConfiguration.getInstance()
+			.setTrustManager(new TrustManager[]{
+				    new X509TrustManager() {
+				        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+				            ...
+				        }
+				        public void checkClientTrusted(
+				            j... {
+				        }
+				        public void checkServerTrusted(
+				            ... {
+				        }
+				    }} 				
+		);		
+	 }   
+}
+}}} 
+
+It is out of scope to provide a guide for implementing your own 'TrustManager'. We recommend that you read [http://download.oracle.com/javase/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#TrustManager Java Secure Socket Extension (JSSE) - Reference Guide].
 ===More information===
 If you need to know more about using Android libraries and how you use the see the documentation: [http://developer.android.com/guide/developing/projects/index.html]
 
