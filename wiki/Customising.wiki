@@ -4,9 +4,6 @@
 = Introduction =
 
 Add your content here.
-
-[http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
-
 = MS Surface =
 There are a number of settings available for the developer to adjust the behaviour of the NAI framework. They are listed in the table below:
 
