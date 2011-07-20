@@ -17,7 +17,7 @@ In addition to the list provided in the thesis some wild ideas could be interest
 
 == Get started ==
 Here is what is necessary to do in order to get started on improving the two platforms in the NAI Framework.
-=== The MS Surface code ==
+== The MS Surface code =
 When the Surface code is checked out from trunk, you get a solution containing two projects:
 || *Title* || *Description* ||
 || NAI || The actual framework as a class library. The project compiles into a DLL and is hence in itself not executeable ||
@@ -26,3 +26,8 @@ When the Surface code is checked out from trunk, you get a solution containing t
 The class  `DebugSettings` in the root of the NAI project can be used to turn console debugging on and off for different areas of the code.
 
 To get an idea of how the code is structured, chapter 3 and 5 of our thesis is relevant to read.
+==The Android smartphone code== 
+The procedure is straight forward. You check out into an Eclipse project just as described at [InstallAndRun Install and run the demo applications]. 
+
+=Tell us =
+Do not forget to tell us if you think that the improvements could benefit others. Then we will merge your contribution into this project. 
