@@ -10,8 +10,8 @@ There are two example applications available for the MS Surface, "Warm-up" and "
 
 Both applications can be checked out from this part of the SVN repository: [http://code.google.com/p/nai-framework/svn/trunk/Examples/Surface]
 You can also download a binary version here:
-  * Warm-up
-  * Restaurant
+  * [http://nai-framework.googlecode.com/files/WarmUp.zip Warm-up]
+  * [http://nai-framework.googlecode.com/files/Restaurant.zip Restaurant]
 
 Both applications include a config file where you must specify the X509 certificate subject required for the secure communication between the tabletop and smartphone.
 
