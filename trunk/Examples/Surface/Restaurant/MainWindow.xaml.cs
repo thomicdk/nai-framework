@@ -36,6 +36,7 @@ namespace Restaurant
 
         public MainWindow()
         {
+            SetupNaiFramework();
             InitializeComponent();
             // Add handlers for Application activation events
             AddActivationHandlers();
@@ -43,6 +44,13 @@ namespace Restaurant
             RestaurantIIA.AddHandler(IdentifiedEvents.IdentifiedPersonArrivedEvent, new IdentifiedEvents.RoutedIdentifiedEventHandler(PersonCheckin));
             RestaurantIIA.AddHandler(IdentifiedEvents.IdentifiedPersonLeftEvent, new IdentifiedEvents.RoutedIdentifiedEventHandler(PersonCheckout));
             Session.Instance.SetRestaurantView(this);
+        }
+
+        private void SetupNaiFramework()
+        {
+            NAI.Properties.Settings.LoadAndSaveCalibrations = true;
+            NAI.Properties.Settings.ServerCertificateSubject = "CN=Test Certificate, O=ITU, E=mtho@itu.dk, L=Copenhagen, C=DK";
+            NAI.Properties.Settings.SimulatorMode = true;
         }
 
         #region Window Members

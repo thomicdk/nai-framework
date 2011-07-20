@@ -74,7 +74,7 @@
                         </StackPanel>
                     </s:ScatterViewItem>
 
-                    <s:ScatterViewItem CanScale="False" ScatterManipulationDelta="ScatterViewItem_ScatterManipulationDelta">
+                    <s:ScatterViewItem CanScale="False" CanRotate="False" ScatterManipulationDelta="ScatterViewItem_ScatterManipulationDelta">
                         <Grid>
                             <Image Height="393" Name="image1" Width="300" Source="/WarmUp;component/Resources/MonaLisa.jpg" />
                             <idc:IdentifiedViewport x:Name="MyIdentifiedViewPort"

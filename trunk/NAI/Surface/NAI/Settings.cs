@@ -100,13 +100,13 @@ namespace NAI.Properties
             }
         }
 
-        //TODO: Michael, Skal der overhovedet være en defaul value her????
+
         private static string _ServerCertificateSubject;
         public static string ServerCertificateSubject
         {
             get {
                 if (_ServerCertificateSubject == null)
-                    _ServerCertificateSubject = "CN=Test Certificate, O=ITU, E=mtho@itu.dk, L=Copenhagen, C=DK";
+                    _ServerCertificateSubject = string.Empty;
                     return _ServerCertificateSubject;
                 }
             set { _ServerCertificateSubject = value; }
@@ -118,8 +118,8 @@ namespace NAI.Properties
         {
             get {return _UdpToken;}
             set { 
-                if (value== null || value.Length == 0)
-                    throw new ArgumentException("UdpToken cannot be null, and must be at least 1 charater long");
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentException("UdpToken cannot be null, and must be at least 1 character long");
                 _UdpToken = value; }
         }
 
