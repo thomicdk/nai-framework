@@ -49,8 +49,23 @@ Most important string values:
   *'app_name' Override the default application name.
   * 'server_udp_id_token' Overrides the default token used to the automatic connection setup. This value must mach the corresponding setting on the 
 
+===Example application===
+You can download a sample appplication that changes the UI of the authentication mechanism.
+
+You get the source here: [http://code.google.com/p/nai-framework/svn/trunk/Examples/Android/CustomAuthenticationUI].
+
+It is important that you already have the core NAI framework downloaded and set up as an Android project as described above. It is also important that it is set up as a library. 
+
+After checking then sample code out, make sure the project links to that NAI library.
+
+Notice that the string resources in the values folder overrides the default 'app_name' and the sample application makes use of a string resource not defined in the library.
+
+The sample application can be used with any of the sample applications provided for the Microsoft Surface. The only thing that is changed is the  UI of the authentication.
+
 ===Customising authentication===
 How you customise the authentication mechanism, and setting custom credentials are explained in section 3.3, Setup, of the thesis mentioned at wiki page [Overview], and will therefore not be covered here.
+
+However, you can download an example application customising the UI part of the authentication as described in the section right above. 
 
 ===Accepting server certificates====
 By default the NAI framework for the Android smartphone accept all server certificates. If you for some reason would like to take control over the acceptance you need to implement you own trust manager.
@@ -67,7 +82,7 @@ public class Main extends BaseActivity {
 				            ...
 				        }
 				        public void checkClientTrusted(
-				            j... {
+				            ... {
 				        }
 				        public void checkServerTrusted(
 				            ... {
