@@ -13,19 +13,21 @@ The list below is taken directly from the thesis, and may be difficult to unders
   # *Unintended touch* When people move their phone across the tabletop screen, they may unintendedly touch the surface display underneath with their ngers. A thin smartphone increases the chance, because it is more dicult to grab. The problem may be minimised by UI design, if not all visual elements are made moveable and touchable by normal touch input.
 
 ==Setup up a project an android project for Eclipse==
-If you do not need to modify the settings, implement your own set of credentials, or customised the authentication mechanism, you do not need to modify the code. Otherwise you need to set up your own project. The following guides you through that process. 
+If you do not need to modify the settings, implement your own set of credentials, or customised the authentication mechanism, you do not need to modify the code. 
+
+If you do need to change the code to your own need, you can change the code directly in the project, but is recommended that you follow the procedure stated below. If you need to have several versions installed at the same time, must set up your own project(s). The following guides you through that process. 
 
 ===Setup the library===
-Make sure that you have followed the procedure as explained in the [InstallAndRun Install and run the demo applications]. You should then have an Android project with the code.
+Make sure that you have followed the procedure as explained in the [InstallAndRun Install and run the demo applications]. You should then have an Android project with the NAI code.
 
-You need to change the project, so that it can be used as a library. Right click the project folder and choose _Properties_. From the new window select "Android" and tick the _Is Library_. This prevents the project from being an application, but allows other projects to include the code in you own projects.
+You need to change the project, so that it can be used as a library. Right click the project folder and choose _Properties_. From the new window select "Android" and tick the _Is Library_. This prevents the project from being an application, but allows other projects to embed the code.
 ===Creating your own project===
-Next, you need to create you own Android project. We suggest that you name the default Activity "Main", but it can be any name.
+Next, you need to create you own Android project. We suggest that you name the default Activity "Main", but it can be any name. It is important that the _min SDK level_ is set to _7_, and _build target_ must be min 2.1-update 
 
-Now you can link the NAI code as a library to your new project.
+Now you can link the NAI code as a library to your new project. Right click the project folder, and choose _Properties_. Choose _Android_ in the new window. Below, press the "Add" button to link the NAI code library to the project.
+
+===Changing settings===
 
 
-
-Assuming that the procedure for importing the android project into Eclipse  
 
 ==Setting up a project for Microsoft Surface for Visual Studio==
