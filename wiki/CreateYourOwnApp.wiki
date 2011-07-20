@@ -41,7 +41,18 @@ public class Main extends BaseActivity {
 Next, delete the _main.xml_ file from the layout folder, and delete all  strings from _strings.xml_ in the values folder. If you want to override the default application name, keep the 'app_name'.
 
 ===Changing settings===
+Of the settings you can change the most important are 'app_name' and 'server_udp_id_token'. The latter controls the token that is used to find the tabletop. 
 
+The text used in the application can be altered her. Check the value folder for of the NAI project. You can override all the string values by defining the in you own project. This way you can localise the language or target the purpose for different applications.
 
+Most important string values:
+  *'app_name' Override the default application name.
+  * 'server_udp_id_token' Overrides the default token used to the automatic connection setup. This value must mach the corresponding setting on the 
+
+===Customising authentication===
+How you customise the authentication mechanism, and setting custom credentials are explained in section 3.3, Setup, of the thesis mentioned at wiki page [Overview], and will therefore not be covered here.
+
+===More information===
+If you need to know more about using Android libraries and how you use the see the documentation: [http://developer.android.com/guide/developing/projects/index.html]
 
 ==Setting up a project for Microsoft Surface for Visual Studio==
