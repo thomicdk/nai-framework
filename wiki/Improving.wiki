@@ -27,7 +27,7 @@ The class  `DebugSettings` in the root of the NAI project can be used to turn co
 
 To get an idea of how the code is structured, chapter 3 and 5 of our thesis is relevant to read.
 ==The Android smartphone code== 
-The procedure is straight forward. You check out into an Eclipse project just as described at [InstallAndRun Install and run the demo applications]. 
+The procedure is straight forward. You check out into an Eclipse project just as described at [InstallAndRun Install and run the demo applications] and improve the code from there. 
 
 =Tell us =
 Do not forget to tell us if you think that the improvements could benefit others. Then we will merge your contribution into this project. 
