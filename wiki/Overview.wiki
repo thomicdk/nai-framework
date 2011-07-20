@@ -38,7 +38,7 @@ The NAI framework have not been tested on other Android versions than 2.1 and 2.
 There is no guarantee that it will run on other types of hardware or Android versions.
 
 The NAI framework have been developed for the The Microsoft Surface 1.0. Soon there will be a Microsoft Surface 2.0 with different specifications and a new development environment. It is out of scope of this project to also target this upcoming version. 
-Microsoft has already released the specifications of the new version of the [http://msdn.microsoft.com/en-us/library/ff727815.aspx Surface SDK].
+Microsoft has already released the specifications of the new version of the [http://msdn.microsoft.com/en-us/library/ff727815.aspx Surface SDK 2.0].
 On the [http://www.surface.com Microsoft Surface homepage] they also promise to provide a migration tool that can transform MSS 1.0 projects to be used at the upcoming MSS 2.0. 
 
 == Preparing the smartphone ==
