@@ -2,14 +2,13 @@
 #sidebar TableOfContents
 
 = Introduction =
+The code includes a number of test application. On that MS Surface, there are two applications which utilize non-anonymous user interaction, and on Android there is an example of how to implement a custom user authentication mechanism. How to install and run the three applications are described here.
 
-Add your content here.
+= MS Surface =
+There are two example application available for the MS Surface, "Warm-up" and "Restaurant". They have been used during conduction of a user evaluation as part of the thesis writing.
 
-[http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
+== Warm-up ==
+It uses default authentication
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
