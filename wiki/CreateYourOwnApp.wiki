@@ -59,3 +59,13 @@ If you need to know more about using Android libraries and how you use the see t
 
 ==Setting up a project for Microsoft Surface for Visual Studio==
 First you have to setup a development environment, either on the actual Surface Unit, or on a separate workstation. Microsoft provides an guide for [http://msdn.microsoft.com/en-us/library/ee804774(v=Surface.10).aspx how to do this]. The Surface SDK 1.0 only runs on Windows Vista 32-bit [http://msdn.microsoft.com/en-us/library/ee804897(v=Surface.10).aspx according to Microsoft]. We have however successfully been developing some of the NAI framework on a 64-bit Windows 7 machine by following [http://blog.hompus.nl/2010/03/03/installing-the-microsoft-surface-sdk-on-windows-7-x64/ this guide]. 
+
+With Visual Studio and the Surface SDK installed, it is easy to setup a new project with the NAI framework included. Just complete these steps:
+
+# Start Visual Studio and choose 'New Project'
+# Choose the 'Surface Application (WPF)' template
+# When the project has been set up, click the 'Project' menu and choose 'Add Reference...'
+# Click 'Browse' and find and choose the `NAI.dll`
+# Done!
+
+Your application is now ready for non-anonymous user interaction. Read chapter 3 of our thesis ([Overview find it here]) or check out the sample applications for inspiration.
