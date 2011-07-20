@@ -5,7 +5,7 @@
 The code base includes a number of example applications. For MS Surface, there are two applications which utilize non-anonymous user interaction, and for Android there is an example of how to implement a custom user authentication mechanism with a customized UI. How to install and run the three applications are described in the following.
 
 = MS Surface =
-There are two example application available for the MS Surface, "Warm-up" and "Restaurant". They have been used during conduction of a user evaluation as part of the thesis writing.
+There are two example applications available for the MS Surface, "Warm-up" and "Restaurant". They have been used during conduction of a user evaluation as part of the thesis writing.
 
 Both applications are ready to run once compiled. They both use the default user authentication mechanism in the NAI framework. 
 
@@ -15,3 +15,6 @@ This application demonstrates some of the features in the NAI Framework. The scr
 [http://nai-framework.googlecode.com/svn/wiki/images/warm-up.jpg]
 
 == Restaurant ==
+The application is an order and payment system for the restaurant of the future. It is an example of deployment of the NAI framework in a familiar and realistic scenario. The screenshot below shows the first state of the application, where two restaurant guests order food and beverages with their smartphones.
+
+[http://nai-framework.googlecode.com/svn/wiki/images/warm-up.jpg]
