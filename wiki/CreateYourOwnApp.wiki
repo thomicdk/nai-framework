@@ -12,7 +12,20 @@ The list below is taken directly from the thesis, and may be difficult to unders
   # *Lessen the movements* Lessen the number of times the phone should be moved. Users care about their phone, and do not like to slide it along the surface, and get tired of lifting the phone from place to place. For example, a solution could be to allow users to order items from a restaurant menu via normal finger touch on the tabletop, but submit the order items by using the phone. Another scenario could be to place the phone at a certain spot, and then drag items to the phone via normal touch on the tabletop. 
   # *Unintended touch* When people move their phone across the tabletop screen, they may unintendedly touch the surface display underneath with their ngers. A thin smartphone increases the chance, because it is more dicult to grab. The problem may be minimised by UI design, if not all visual elements are made moveable and touchable by normal touch input.
 
-
-
 ==Setup up a project an android project for Eclipse==
+If you do not need to modify the settings, implement your own set of credentials, or customised the authentication mechanism, you do not need to modify the code. Otherwise you need to set up your own project. The following guides you through that process. 
+
+===Setup the library===
+Make sure that you have followed the procedure as explained in the [InstallAndRun Install and run the demo applications]. You should then have an Android project with the code.
+
+You need to change the project, so that it can be used as a library. Right click the project folder and choose _Properties_. From the new window select "Android" and tick the _Is Library_. This prevents the project from being an application, but allows other projects to include the code in you own projects.
+===Creating your own project===
+Next, you need to create you own Android project. We suggest that you name the default Activity "Main", but it can be any name.
+
+Now you can link the NAI code as a library to your new project.
+
+
+
+Assuming that the procedure for importing the android project into Eclipse  
+
 ==Setting up a project for Microsoft Surface for Visual Studio==
