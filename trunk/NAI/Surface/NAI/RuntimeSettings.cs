@@ -9,7 +9,7 @@ using System.Drawing;
 namespace NAI.Properties
 {
 
-    public static class RuntimeSettings 
+    public static class Settings 
     {
         private static Screen _screen;
         public static Screen TabletopScreen
@@ -113,14 +113,14 @@ namespace NAI.Properties
         }
 
 
-        private static string _UdpCallSign = "NAIServer";
-        public static string UdpCallSign
+        private static string _UdpToken = "NAIServer";
+        public static string UdpToken
         {
-            get {return _UdpCallSign;}
+            get {return _UdpToken;}
             set { 
                 if (value== null || value.Length == 0)
-                    throw new ArgumentException("UdpCallSign cannot be null, and must be at least 1 charater long");
-                _UdpCallSign = value; }
+                    throw new ArgumentException("UdpToken cannot be null, and must be at least 1 charater long");
+                _UdpToken = value; }
         }
 
 

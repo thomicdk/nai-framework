@@ -7,6 +7,7 @@ using NAI.UI.Client;
 using Microsoft.Surface.Presentation;
 using System;
 using NAI.Client.Calibration;
+using NAI.Properties;
 
 namespace NAI.Storage
 {
@@ -86,7 +87,7 @@ namespace NAI.Storage
 
         private void LoadData()
         {
-            if (!Properties.Settings.Default.LoadCalibrations && !Properties.Settings.Default.LoadAndSaveCalibrations) return;
+            if (!Settings.LoadCalibrations && !Settings.LoadAndSaveCalibrations) return;
             if (!File.Exists(DataPath)) return; // File does not exist
             try
             {
@@ -127,7 +128,7 @@ namespace NAI.Storage
 
         private void SaveData()
         {
-            if (!Properties.Settings.Default.LoadAndSaveCalibrations) return;
+            if (!Settings.LoadAndSaveCalibrations) return;
             XmlTextWriter xtw = new XmlTextWriter(DataPath, Encoding.UTF8);
             xtw.Formatting = Formatting.Indented;
             xtw.WriteStartDocument();

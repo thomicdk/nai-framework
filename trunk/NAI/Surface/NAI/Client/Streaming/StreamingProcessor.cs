@@ -37,8 +37,8 @@ namespace NAI.Client.Streaming
             this._screenRectangle = ((StreamingRectangleUserControl)tagVisualization.MyContent).ScreenRectangle;
             this._tagVisualization = tagVisualization;
             this._clientCommunication = clientCommunication;
-            FramesPerSecond = RuntimeSettings.StreamingFrameRate;
-            _screen = RuntimeSettings.TabletopScreen;
+            FramesPerSecond = Settings.StreamingFrameRate;
+            _screen = Settings.TabletopScreen;
         }
 
         public void Run()

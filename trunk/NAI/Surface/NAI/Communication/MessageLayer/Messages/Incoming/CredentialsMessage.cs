@@ -16,7 +16,7 @@ namespace NAI.Communication.MessageLayer.Messages.Incoming
 
         protected override void ParseMessage(byte[] incomingMessageBytes)
         {
-            this.Credentials = RuntimeSettings.AuthenticationHandler.ParseCredentialsMessage(incomingMessageBytes);
+            this.Credentials = Settings.AuthenticationHandler.ParseCredentialsMessage(incomingMessageBytes);
         }
     }
 }
