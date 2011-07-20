@@ -62,10 +62,10 @@ First you have to setup a development environment, either on the actual Surface 
 
 With Visual Studio and the Surface SDK installed, it is easy to setup a new project with the NAI framework included. Just complete these steps:
 
-# Start Visual Studio and choose 'New Project'
-# Choose the 'Surface Application (WPF)' template
-# When the project has been set up, click the 'Project' menu and choose 'Add Reference...'
-# Click 'Browse' and find and choose the `NAI.dll`
-# Done!
+  # Start Visual Studio and choose 'New Project'
+  # Choose the 'Surface Application (WPF)' template
+  # When the project has been set up, click the 'Project' menu and choose 'Add Reference...'
+  # Click 'Browse' and find and choose the `NAI.dll`
+  # Done!
 
 Your application is now ready for non-anonymous user interaction. Read chapter 3 of our thesis ([Overview find it here]) or check out the sample applications for inspiration.
