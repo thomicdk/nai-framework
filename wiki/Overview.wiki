@@ -37,7 +37,7 @@ The NAI framework has been built for two specific hardware components
 The NAI framework have not been tested on other Android versions than 2.1 and 2.2. However, it should operate on later version of the software stack as well. During development we used HTC Desire with Android 2.2, HTC Legend with Android 2.1. 
 There is no guarantee that it will run on other types of hardware or Android versions.
 
-The [http://msdn.microsoft.com/en-us/library/ee804952(v=Surface.10).aspx simulator] included in the [http://msdn.microsoft.com/en-us/library/ee804767(v=Surface.10).aspx Surface SDK] can also be used to work with the NAI framework. It is however required to specify in the NAI framework if the simulator is used. Read more in the article on [Customising Customising the framework to your needs].
+The [http://msdn.microsoft.com/en-us/library/ee804952(v=Surface.10).aspx Surface Simulator] included in the [http://msdn.microsoft.com/en-us/library/ee804767(v=Surface.10).aspx Surface SDK] can also be used to work with the NAI framework. It is however required to specify in the NAI framework if the simulator is used. Read more in the article on [Customising Customising the framework to your needs].
 
 The NAI framework have been developed for the The Microsoft Surface 1.0. Soon there will be a Microsoft Surface 2.0 with different specifications and a new development environment. It is out of scope of this project to also target this upcoming version. 
 Microsoft has already released the specifications of the new version of the [http://msdn.microsoft.com/en-us/library/ff727815.aspx Surface SDK 2.0].
