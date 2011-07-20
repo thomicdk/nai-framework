@@ -35,11 +35,14 @@ The NAI framework has been built for two specific hardware components
   * The Microsoft Surface 1.0  
 
 The NAI framework have not been tested on other Android versions than 2.1 and 2.2. However, it should operate on later version of the software stack as well. During development we used HTC Desire with Android 2.2, HTC Legend with Android 2.1. 
-There is no guarantee that it will run on other types of hardware or Android verions.
+There is no guarantee that it will run on other types of hardware or Android versions.
 
 The NAI framework have been developed for the The Microsoft Surface 1.0. We soon there will be a Microsoft Surface 2.0 with different specifications and development environment. It is without the scope of this project targeting the comming version. 
 On the [http://www.surface.com Microsoft Surface homepage] they do promise to provide a migration tool that can transform MSS 1.0 projects to be used at the comming MSS 2.0. They also provide a complete SDK that is needed for development.
-   
+== Preparing the smartphone ==
+The smartphone must carry a MSS tag on the back. The tag must preferably be positioned upright in the middle of the phone as shown below.
+[http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
+    
 = The next step =
 The next step would be to download and set up a project for the Android smartphone and the Microsoft Surface so you can take the test applications for at spin.
 
