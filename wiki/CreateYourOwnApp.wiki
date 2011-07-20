@@ -26,6 +26,20 @@ Next, you need to create you own Android project. We suggest that you name the d
 
 Now you can link the NAI code as a library to your new project. Right click the project folder, and choose _Properties_. Choose _Android_ in the new window. Below, press the "Add" button to link the NAI code library to the project.
 
+Next you need to modify a couple of things. Android automatically adds stuff to you project. You need to modify that.
+
+You need to change the default Activity. Remove the _onCreate_ method, and have the class extend the _BaseActivity_ from the library, like this:
+{{{
+...
+import dk.itu.nai.ui.BaseActivity;
+
+public class Main extends BaseActivity {
+    
+}
+}}}
+
+Next, delete the _main.xml_ file from the layout folder, and delete all  strings from _strings.xml_ in the values folder. If you want to override the default application name, keep the 'app_name'.
+
 ===Changing settings===
 
 
