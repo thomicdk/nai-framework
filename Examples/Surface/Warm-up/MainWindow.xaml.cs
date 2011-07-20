@@ -45,9 +45,8 @@ namespace WarmUp
 
         private void SetupNaiFramework()
         {
-            NAI.Properties.Settings.LoadAndSaveCalibrations = true;
-            NAI.Properties.Settings.ServerCertificateSubject = "CN=Test Certificate, O=ITU, E=mtho@itu.dk, L=Copenhagen, C=DK";
-            NAI.Properties.Settings.SimulatorMode = true;
+            NAI.Properties.Settings.ServerCertificateSubject = Properties.Settings.Default.NAIServerCertificateSubject;
+            NAI.Properties.Settings.SimulatorMode = Properties.Settings.Default.SimulatorMode;
         }
 
         #region event handlers
