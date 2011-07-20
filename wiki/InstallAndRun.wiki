@@ -2,7 +2,11 @@
 #sidebar TableOfContents
 <wiki:toc max_depth="1" />
 = Introduction =
-The code base includes a number of example applications. For MS Surface, there are two applications which utilize non-anonymous user interaction, and for Android there is an example of how to implement a custom user authentication mechanism with a customized UI. How to install and run the three applications are described in the following.
+The code base includes a number of example applications. For MS Surface, there are two applications which utilize non-anonymous user interaction. For Android there are two ways of installing the maching default application.
+How to install and run the three applications are described in the following.
+
+It is required that you can download source code and set up a project in Visual Studio as well as in Eclipse. It is not covered here.
+
 
 = MS Surface =
 There are two example applications available for the MS Surface, "Warm-up" and "Restaurant". They have been used during conduction of a user evaluation as part of the thesis writing.
@@ -20,6 +24,7 @@ The application is an order and payment system for the restaurant of the future.
 [http://nai-framework.googlecode.com/svn/wiki/images/restaurant.jpg]
 
 =Android smartphone=
-There are two way of getting the NAI framework on your Android smartphone. One is downloading a binary at the [http://code.google.com/p/nai-framework/downloads/list download page] and install it directly, the other is checking out the Android code into a Android project in Eclipse. 
+There are two ways of getting the NAI framework example on your Android smartphone. One is downloading a binary at the [http://code.google.com/p/nai-framework/downloads/list download page] and install it directly, the other is checking out the Android code into a Android project in Eclipse. You need to check out the following folder to get the lates version:
+[http://code.google.com/p/nai-framework/svn/trunk/NAI/Android]
 
-We do not cover how to set up an Android project, or checking out the code below.
+Make sure the Android project is targeted min. SDK 7, or Android 2.1-update. Earlier versions will not operate correctly.
