@@ -57,18 +57,19 @@ public class UdpComm extends Thread {
 						
 			byte[] response_msg = new byte[serverIdMatchByteArray.length];
 			byte[] request_msg = serverIdMatch.getBytes("UTF-8");
+			Log.d(ME, "Token: " + serverIdMatch);
 			DatagramPacket requestPacket = new DatagramPacket(request_msg, request_msg.length, InetAddress.getByName(UDPGroupIP), UDPGroupPort);
 			DatagramPacket responsePacket;
 			Log.d(ME, "run() before while loop");
 			while(_running)
 			{
 				Thread.yield();
-//				Log.d(ME, "Before sending packet");
+				Log.d(ME, "Before sending packet");
 				mSocket.send(requestPacket);
 				
 				responsePacket = new DatagramPacket(response_msg, response_msg.length );
 				
-//				Log.d(ME, "run() before recieve packet");
+				Log.d(ME, "run() before recieve packet");
 				try
 				{
 					mSocket.receive(responsePacket);
