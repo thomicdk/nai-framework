@@ -44,6 +44,8 @@ On the [http://www.surface.com Microsoft Surface homepage] they do promise to pr
 The smartphone must carry a MSS tag on the back. The tag must preferably be positioned upright in the middle of the phone as shown below.
 [http://nai-framework.googlecode.com/svn/wiki/images/DesireBack-upright.png]
 
+MS `Byte` tags can be [http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11029 downloaded here]. MS `Identity` tags can be generated with this tool. 
+
 == Preparing the MS tabletop ==
 Install a X509 certificate in the local key store to prepare the tabletop for secure SSL-based communication with the smartphone. The tool [http://www.softpedia.com/get/Security/Security-Related/X509-Certificate-Generator.shtml X509 Certificate Generator 1.0] is useful for creating in-secure certificates for development and testing purposes.
 
