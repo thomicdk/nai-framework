@@ -22,14 +22,8 @@ namespace NAI.UI.Controls
 
         private Server _server;
 
-        //private NAITagVisualizationHost _host;
-
         public IdentifiedInteractionArea()
         {
-            //_host = new NAITagVisualizationHost();
-            //TagVisualizer.SetIsTagVisualizationHost(_host, true);
-            //base.Content = _host;
-
             _server = Server.Instance;
 
             AddHandler(TagVisualization.LostTagEvent, new RoutedEventHandler(OnTagLost));
@@ -37,18 +31,8 @@ namespace NAI.UI.Controls
             // Add event handler to override the needed events to enfore identified access to UIelements
             this.AddHandler(Contacts.PreviewContactDownEvent, new ContactEventHandler(onPreviewContactDownEvent));
             this.AddHandler(Contacts.PreviewContactChangedEvent, new ContactEventHandler(TagVisualizer_PreviewContactChanged));
-            // More events?? Like Mouse.PreviewMouseLeftButtonDown
-
-            //AddHandler(TagVisualization.GotTagEvent, new RoutedEventHandler(OnGotTag));
-        
         }
 
-        //private void OnGotTag(object sender, RoutedEventArgs e)
-        //{
-        //    Console.WriteLine("OnGotTag: " + TagVisualizer.GetIsTagVisualizationHost(_host));
-        //}
-
-        
 
         /// <summary>
         /// Accept any tag that is not already visualized.
@@ -69,11 +53,6 @@ namespace NAI.UI.Controls
             return null;
         }
 
-        //internal NAITagVisualizationHost GetHost()
-        //{
-        //    return OurHost;
-        //}
-
         private void OnTagLost(object sender, RoutedEventArgs e)
         {
             if (e.OriginalSource is TagVisualization)
@@ -88,27 +67,20 @@ namespace NAI.UI.Controls
             if (e.Contact.IsTagRecognized)
             {
                 TagData tag = e.Contact.Tag;
-                TagVisualization tagVisualization = FindVisualization(tag);
-                if (tagVisualization != null)
+                if (ClientSessionsController.Instance.GetClientState(tag) is CalibrationState)
                 {
-                    ClientTagVisualization clientVisualization = tagVisualization as ClientTagVisualization;
-
-                    if (ClientSessionsController.Instance.GetClientState(tag) is CalibrationState)
+                    TagVisualization tagVisualization = FindVisualization(tag);
+                    if (tagVisualization != null)
                     {
+                        ClientTagVisualization clientVisualization = tagVisualization as ClientTagVisualization;
                         CalibrationUserControl cuc = clientVisualization.MyContent as CalibrationUserControl;
                         if (cuc != null)
                         {
                             double orientation = e.Contact.GetOrientation(cuc);
+                            Point newPos = this.TranslatePoint(e.Contact.GetCenterPosition(this), clientVisualization);
+                            Debug.WriteLineIf(DebugSettings.DEBUG_CALIBRATION, string.Format("Tag Moved: Position: {0}. Rotation: {1}.", newPos, orientation));                            cuc.TagPosition = newPos;
                             cuc.TagOrientation = orientation;
-                            e.Handled = true;
-                            //if (clientVisualization.MovedOnce)
-                            //{
-                            //    e.Handled = true;
-                            //}
-                            //else
-                            //{
-                            //    clientVisualization.MovedOnce = true;
-                            //}
+                            e.Handled = true; // Ensure that the calibration control is not moved
                         }
                     }
                 }
