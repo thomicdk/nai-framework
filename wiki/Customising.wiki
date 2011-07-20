@@ -115,11 +115,11 @@ Most important string values:
 ==Customising authentication==
 How you customise the authentication mechanism, and setting custom credentials are explained in section 3.3, Setup, of the thesis mentioned at wiki page [Overview].
 
-You can download an sample application that customises the UI part of the authentication as described in wiki page [InstallAndRun Install and run the demo applications]. 
+You can download a sample application that customises the UI part of the authentication as described in wiki page [InstallAndRun Install and run the demo applications]. The 'BasicAuthenticationHandler' in the NAI framework for the smartphone shows you a complete example of how to set up the authentication mechanism using an Activity for having the user enter his credentials.
 
-Below follow a small example that shows how to implement that part of the  authentication handler that creates the credentials message, as well as how the specialisation of 'ClientCredentials' that is needed.
+Below follows a small example that shows how to implement that part of the  authentication handler that creates the credentials object, as well as the specialisation of 'ClientCredentials' that is needed.
 
-Excerpt from an authentication handler that get user name as well as password from an Activity:
+Excerpt from an authentication handler that get the username as well as password from an Activity:
 {{{
 public class UsernamePasswordAuthenticationHandler extends AuthenticationHandler {
 
