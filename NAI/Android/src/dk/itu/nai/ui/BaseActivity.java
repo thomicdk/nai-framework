@@ -103,9 +103,10 @@ public class BaseActivity extends Activity implements ICommunicationServiceCallb
 		// ApplicationPreferences 
 		PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 		
-		// CommunicationPreferences
+		// CommunicationPreferences		
+		//Log.d(ME, "Server Token: " + getResources().getString(R.string.server_udp_id_token));
 		CommConfiguration.SERVER_UDP_ID_TOKEN = getResources().getString(R.string.server_udp_id_token);
-
+		
 		// Screen and touch listeners
 		imgV = (ImageView) findViewById(R.id.imgVTouchScreen);
 		imgV.setOnTouchListener(this);
