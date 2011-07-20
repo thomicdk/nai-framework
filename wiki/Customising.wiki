@@ -1,11 +1,11 @@
-#summary One-sentence summary of this page.
+#summary Customising the framework to your needs
 #sidebar TableOfContents
 
 = Introduction =
+There are several settings available to change the behaviour of the NAI framework on both the Android and Surface platforms.
 
-Add your content here.
 = MS Surface =
-There are a number of settings available for the developer to adjust the behaviour of the NAI framework. They are listed in the table below:
+There are a number of settings available for the developer to adjust the behaviour of the NAI framework on the MS Surface. They are listed in the table below:
 
 || *Name* || *.NET type* || *Default value* || *Description* ||
 || AuthenticationHandler || `NAI.Client.Authentication.IAuthenticationHandler` || `NAI.Client.Authentication.BasicAuthenticationHandler` || The user authentication mechanism used to authenticate smartphone users. It must be compatible with the authentication mechanism running on the smartphone. ||
