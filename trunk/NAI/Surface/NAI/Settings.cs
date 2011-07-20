@@ -70,7 +70,7 @@ namespace NAI.Properties
             set { _LoadCalibrations = value; }
         }
 
-        private static bool _SimulatorMode = true;
+        private static bool _SimulatorMode = false;
         public static bool SimulatorMode
         {
             get { return _SimulatorMode; }
@@ -85,13 +85,13 @@ namespace NAI.Properties
             set { _LoadAndSaveCalibrations = value;}
         }
 
-        private static Point _SimulatorOriginOffset;
+        private static Point _SimulatorOriginOffset = new Point(25, 101);
         public static Point SimulatorOriginOffset
         {
             get 
             { 
                 if (_SimulatorOriginOffset == null) 
-                        _SimulatorOriginOffset = new Point(25, 101);                        
+                        _SimulatorOriginOffset = new Point(0, 0);                        
                     return _SimulatorOriginOffset;  
             }
             set

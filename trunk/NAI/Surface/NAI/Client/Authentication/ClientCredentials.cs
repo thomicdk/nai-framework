@@ -5,7 +5,7 @@ namespace NAI.Client.Authentication
     {
         public string UserId { get; private set; }
 
-        internal ClientCredentials(string userId)
+        public ClientCredentials(string userId)
         {
             this.UserId = userId;
         }
