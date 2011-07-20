@@ -14,7 +14,7 @@ The UI controls are pre-built to show how to build you own controls and to help 
 
 The events are really _normal_ touch and hover events, but in addition to the conventional information, the event arguments also contain the identity of the user causing the event. Because the presence of the user is relevant the framework also support _person events_.
 
-For a better understanding and a more detailed explanation we encourage you to watch a small presentation video, and read the thesis.
+For a better understanding and a more detailed explanation we encourage you to watch a small presentation video, and read the thesis (especially chapter 3 and 5).
 
 = Watch the video = 
 We have created a small video documenting the NAI framework.
@@ -37,8 +37,9 @@ The NAI framework has been built for two specific hardware components
 The NAI framework have not been tested on other Android versions than 2.1 and 2.2. However, it should operate on later version of the software stack as well. During development we used HTC Desire with Android 2.2, HTC Legend with Android 2.1. 
 There is no guarantee that it will run on other types of hardware or Android versions.
 
-The NAI framework have been developed for the The Microsoft Surface 1.0. We soon there will be a Microsoft Surface 2.0 with different specifications and development environment. It is without the scope of this project targeting the comming version. 
-On the [http://www.surface.com Microsoft Surface homepage] they do promise to provide a migration tool that can transform MSS 1.0 projects to be used at the comming MSS 2.0. They also provide a complete SDK that is needed for development.
+The NAI framework have been developed for the The Microsoft Surface 1.0. Soon there will be a Microsoft Surface 2.0 with different specifications and a new development environment. It is out of scope of this project to also target this upcoming version. 
+Microsoft has already released the specifications of the new version of the [http://msdn.microsoft.com/en-us/library/ff727815.aspx Surface SDK].
+On the [http://www.surface.com Microsoft Surface homepage] they also promise to provide a migration tool that can transform MSS 1.0 projects to be used at the upcoming MSS 2.0. 
 
 == Preparing the smartphone ==
 The smartphone must carry a MSS tag on the back. The tag must preferably be positioned upright in the middle of the phone as shown below.
