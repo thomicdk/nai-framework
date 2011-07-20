@@ -1,5 +1,5 @@
   * [Overview What is the NAI framework?]
   * [InstallAndRun Install and run the demo applications]
-  * [CreateYourOwnApp Create you own applications]
+  * [CreateYourOwnApp Create your own applications]
     * [Customising Customising the framework to your needs]
   * [Improving Improving the NAI framewok]
