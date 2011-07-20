@@ -38,3 +38,66 @@ public partial class MainWindow : SurfaceWindow
 	}
 }
 }}}
+
+== Customising user authentication ==
+To implement a customised user authentication mechanism you have to do three things.
+# Implement a specialization of `NAI.Client.Authentication.ClientCredentials`.
+# Implement the interface `IAuthenticationHandler`.
+# Plug in the authentication mechanism to the framework.
+
+Below is an example of how to implement the two first steps:
+{{{
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Text;
+using NAI.Client.Authentication;
+
+namespace NAITest.CustomAuthentication
+{
+    class UsernamePasswordAuthentication : IAuthenticationHandler
+    {
+        private Dictionary<string, string> _users;
+
+        public UsernamePasswordAuthentication()
+        {
+            _users = new Dictionary<string, string>();
+            _users.Add("michael", "123456");
+            _users.Add("thomas", "qwerty");
+        }
+
+        public ClientCredentials ParseCredentialsMessage(byte[] messageBody)
+        {
+            BinaryReader br = new BinaryReader(new MemoryStream(messageBody), Encoding.UTF8);
+            int usernameLength = IPAddress.NetworkToHostOrder(br.ReadInt32());
+            string username = Encoding.UTF8.GetString(br.ReadBytes(usernameLength));
+
+            int passwordLength = IPAddress.NetworkToHostOrder(br.ReadInt32());
+            string password = Encoding.UTF8.GetString(br.ReadBytes(passwordLength));
+
+            return new UsernamePasswordCredentials(username, password);
+        }
+
+        public bool Authenticate(ClientCredentials credentials)
+        {
+            var cred = credentials as UsernamePasswordCredentials;
+            if (_users.ContainsKey(cred.UserId) &&
+                _users[cred.UserId].Equals(cred.Password))
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    class UsernamePasswordCredentials : ClientCredentials
+    {
+        public string Password { get; set; }
+
+        public UsernamePasswordCredentials(string username, string password) : base(username)
+        {
+            this.Password = password;
+        }
+    }
+}
+}}}
