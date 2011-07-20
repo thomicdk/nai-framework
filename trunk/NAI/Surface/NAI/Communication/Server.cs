@@ -122,7 +122,8 @@ namespace NAI.Communication
                 SocketOptionName.AddMembership,
                     new MulticastOption(ip, IPAddress.Any));
 
-            byte[] incomming = new byte[msg.Length];
+            byte[] incomming = new byte[512];
+            int numberOfBytesRecieved = 0;
 
             while (_running)
             {
@@ -130,15 +131,22 @@ namespace NAI.Communication
                 {
                     Debug.WriteLineIf(DebugSettings.DEBUG_COMMUNICATION, "Waiting for incomming UDP message.");
                     EndPoint epSendTo = (EndPoint) new IPEndPoint(IPAddress.Any, UDPPortGroup);
-                    s.ReceiveFrom(incomming, ref epSendTo);
+                    numberOfBytesRecieved = s.ReceiveFrom(incomming, 0, incomming.Length, SocketFlags.None, ref epSendTo);
                     Debug.WriteLineIf(DebugSettings.DEBUG_COMMUNICATION, "Got UDP package!");
-                    String response = Encoding.UTF8.GetString(incomming, 0, incomming.Length);
-
-                    if (response.Equals(Identifier))
+                    if (numberOfBytesRecieved == msg.Length)
                     {
-                        s.SendTo(msg, epSendTo);
-                        Debug.WriteLineIf(DebugSettings.DEBUG_COMMUNICATION, "UDP response sent!");
+                        String token = Encoding.UTF8.GetString(incomming, 0, numberOfBytesRecieved).Trim();
+                        Debug.WriteLineIf(DebugSettings.DEBUG_COMMUNICATION, "Token: " + token);
+                        if (token.Equals(Identifier))
+                        {
+                            s.SendTo(msg, epSendTo);
+                            Debug.WriteLineIf(DebugSettings.DEBUG_COMMUNICATION, "UDP response sent!");
+                        }
+
                     }
+                    
+                    
+                    
                 }
                 catch (SocketException se)
                 {
@@ -150,6 +158,7 @@ namespace NAI.Communication
             if (s != null && s.Connected)            
                 s.Close();
 
+            
             s = null;
             ipep = null;
         }
