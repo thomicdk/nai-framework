@@ -12,7 +12,7 @@ namespace NAI
         /// of the code here.
         /// Debugging is printed to the console
         /// </summary>
-        public static bool DEBUG_COMMUNICATION = false;
+        public static bool DEBUG_COMMUNICATION = true;
         public static bool DEBUG_CALIBRATION = false;
         public static bool DEBUG_EVENTS = false;
         public static bool DEBUG_PAIRING = false;

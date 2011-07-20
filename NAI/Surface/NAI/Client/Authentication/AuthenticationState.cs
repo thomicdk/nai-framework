@@ -12,7 +12,7 @@ namespace NAI.Client.Authentication
     internal class AuthenticationState : ClientState
     {
 
-        private static IAuthenticationHandler AuthenticationHandler = RuntimeSettings.AuthenticationHandler;
+        private static IAuthenticationHandler AuthenticationHandler = Settings.AuthenticationHandler;
 
         public AuthenticationState(ClientSession session)
             : base(session)

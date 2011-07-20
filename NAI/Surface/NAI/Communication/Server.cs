@@ -11,6 +11,7 @@ using NAI.UI.Client;
 using NAI.Client;
 using NAI.Communication.SocketLayer;
 using NAI.Communication.MessageLayer;
+using NAI.Properties;
 
 namespace NAI.Communication
 {
@@ -23,7 +24,7 @@ namespace NAI.Communication
     {
         #region Static fields, methods and properties
 
-        public readonly static String Identifier = Properties.Settings.Default.UdpCallSign;
+        public readonly static String Identifier = Settings.UdpToken;
         public readonly static byte[] msg = System.Text.Encoding.UTF8.GetBytes(Identifier);
         public readonly static String UDPIPgroup = "224.0.2.0";
         public readonly static int UDPPortGroup = 10035;
@@ -180,7 +181,7 @@ namespace NAI.Communication
                     store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
                     X509Certificate2Collection storeCollection = (X509Certificate2Collection)store.Certificates;
 
-                    string certificateSubject = Properties.Settings.Default.ServerCertificateSubject;
+                    string certificateSubject = Settings.ServerCertificateSubject;
                     X509Certificate2Collection findResults = storeCollection.Find(X509FindType.FindBySubjectDistinguishedName, certificateSubject, true);
                     if (findResults.Count > 0)
                     {
