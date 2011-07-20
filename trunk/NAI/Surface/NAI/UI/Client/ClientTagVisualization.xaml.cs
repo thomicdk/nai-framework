@@ -131,7 +131,6 @@ namespace NAI.UI.Client
                 {
                     this.PhysicalCenterOffsetFromTag = ClientCalibration.OffsetInches;
                     this.OrientationOffsetFromTag = -ClientCalibration.Orientation;
-
                     StreamingRectangleUserControl content = new StreamingRectangleUserControl(this, ClientCalibration.Width, ClientCalibration.Height);
                     MyContent = content;
                     ((StreamingState)this.ClientSession.State).StartStreaming();
@@ -151,12 +150,14 @@ namespace NAI.UI.Client
             this.ContentContainer.Children.Clear();
             if (MyContent != null)
             {
+                
                 this.ContentContainer.Children.Add(MyContent);
-                this.ContentContainer.InvalidateVisual();
-                this.ContentContainer.UpdateLayout();
+                //this.ContentContainer.InvalidateVisual();
+                //this.ContentContainer.UpdateLayout();
+                this.InvalidateVisual();
+                this.UpdateLayout();
                 if (ClientSession != null && ClientSession.State is StreamingState)
                 {
-                    
                     // Perform hit testing to raise LensOver events
                     HitTestArea();
                 }
@@ -319,25 +320,15 @@ namespace NAI.UI.Client
             {
                 HitTestArea();
             }
-            else if (MyContent is CalibrationUserControl)
-            {
-                // Update tag postion for Calibration control
-                // The position is relative to the origo of the calibration control
-                CalibrationUserControl calibrationUserControl = MyContent as CalibrationUserControl;
-                
-                calibrationUserControl.TagPosition = Visualizer.TranslatePoint(e.TagVisualization.Center, MyContent);
-            }
         }
 
         private void TagVisualization_LostTag(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("Tag lost: " + this.VisualizedTag);
-
-            // Raise LensOut events
+            // Raise HoverOut events
             foreach (UIElement element in _lensOverElements)
             {
                 RaiseEventPair(element, IdentifiedEvents.IdentifiedHoverOutEvent, new RoutedIdentifiedHoverEventArgs(IdentifiedEvents.PreviewIdentifiedHoverOutEvent, ClientId, this, null));
-                Debug.WriteLineIf(DebugSettings.DEBUG_HITTEST || DebugSettings.DEBUG_EVENTS, "Raising LensOutEvent on " + element);
+                Debug.WriteLineIf(DebugSettings.DEBUG_HITTEST || DebugSettings.DEBUG_EVENTS, "Raising HoverOutEvent on " + element);
             }
 
             // Cleanup
