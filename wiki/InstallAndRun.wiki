@@ -1,6 +1,6 @@
 #summary How to install and run example applications
 #sidebar TableOfContents
-
+<wiki:toc max_depth="1" />
 = Introduction =
 The code base includes a number of example applications. For MS Surface, there are two applications which utilize non-anonymous user interaction, and for Android there is an example of how to implement a custom user authentication mechanism with a customized UI. How to install and run the three applications are described in the following.
 
@@ -18,3 +18,8 @@ This application demonstrates some of the features in the NAI Framework. The scr
 The application is an order and payment system for the restaurant of the future. It is an example of deployment of the NAI framework in a familiar and realistic scenario. The screenshot below shows the first state of the application, where two restaurant guests order food and beverages with their smartphones.
 
 [http://nai-framework.googlecode.com/svn/wiki/images/restaurant.jpg]
+
+=Android smartphone=
+There are two way of getting the NAI framework on your Android smartphone. One is downloading a binary at the [http://code.google.com/p/nai-framework/downloads/list download page] and install it directly, the other is checking out the Android code into a Android project in Eclipse. 
+
+We do not cover how to set up an Android project, or checking out the code below.
