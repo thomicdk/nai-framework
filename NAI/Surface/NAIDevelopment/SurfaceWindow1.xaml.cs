@@ -15,6 +15,7 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using NAI.UI.Events;
+using System.Windows.Forms;
 
 namespace NAIDevelopment
 {
@@ -28,11 +29,35 @@ namespace NAIDevelopment
         /// </summary>
         public SurfaceWindow1()
         {
+            SetupNaiFramework();
             InitializeComponent();
             // Add handlers for Application activation events
             AddActivationHandlers();
         }
 
+        private void SetupNaiFramework()
+        {
+            NAI.Properties.Settings.ServerCertificateSubject = Properties.Settings.Default.NAIServerCertificateSubject;
+            NAI.Properties.Settings.SimulatorMode = Properties.Settings.Default.SimulatorMode;
+
+            /*
+             * If you develop directly on the Surface unit, please remove the 
+             * code snippet below.
+             * If you have a screen attached to the Surface unit, this code
+             * is relevant
+             */
+            if (!NAI.Properties.Settings.SimulatorMode)
+            {
+                foreach (Screen s in Screen.AllScreens)
+                {
+                    if (!s.Primary)
+                    {
+                        NAI.Properties.Settings.TabletopScreen = s;
+                        break;
+                    }
+                }
+            }
+        }
 
         /// <summary>
         /// Occurs when the window is about to close. 

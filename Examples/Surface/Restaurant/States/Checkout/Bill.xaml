@@ -94,7 +94,7 @@
                         ide:IdentifiedEvents.PreviewIdentifiedHoverOver="Transfer_HoverOver" 
                         ide:IdentifiedEvents.PreviewIdentifiedHoverOut="Transfer_HoverOut">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/SecureTouch;component/Resources/SecureLock.png" Margin="0 0 5 0" Height="15"></Image>
+                    <Image Source="/Restaurant;component/Resources/SecureLock.png" Margin="0 0 5 0" Height="15"></Image>
                     <TextBlock VerticalAlignment="Center" >Transfer bill</TextBlock>
                 </StackPanel>
             </id:IdentifiedSurfaceButton>

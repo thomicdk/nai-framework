@@ -16,6 +16,7 @@ using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using NAI.UI.Events;
 using NAI.Client;
+using System.Windows.Forms;
 
 namespace WarmUp
 {
@@ -47,6 +48,24 @@ namespace WarmUp
         {
             NAI.Properties.Settings.ServerCertificateSubject = Properties.Settings.Default.NAIServerCertificateSubject;
             NAI.Properties.Settings.SimulatorMode = Properties.Settings.Default.SimulatorMode;
+
+            /*
+             * If you develop directly on the Surface unit, please remove the 
+             * code snippet below.
+             * If you have a screen attached to the Surface unit, this code
+             * is relevant
+             */
+            if (!NAI.Properties.Settings.SimulatorMode)
+            {
+                foreach (Screen s in Screen.AllScreens)
+                {
+                    if (!s.Primary)
+                    {
+                        NAI.Properties.Settings.TabletopScreen = s;
+                        break;
+                    }
+                }
+            }
         }
 
         #region event handlers

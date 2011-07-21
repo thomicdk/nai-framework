@@ -24,6 +24,7 @@ using Restaurant.States.Eating;
 using System.ComponentModel;
 using Restaurant.States.Final;
 using Petzold.TextOnPath;
+using System.Windows.Forms;
 
 namespace Restaurant
 {
@@ -50,6 +51,24 @@ namespace Restaurant
         {
             NAI.Properties.Settings.ServerCertificateSubject = Properties.Settings.Default.NAIServerCertificateSubject;
             NAI.Properties.Settings.SimulatorMode = Properties.Settings.Default.SimulatorMode;
+
+            /*
+             * If you develop directly on the Surface unit, please remove the 
+             * code snippet below.
+             * If you have a screen attached to the Surface unit, this code
+             * is relevant
+             */
+            if (!NAI.Properties.Settings.SimulatorMode)
+            {
+                foreach (Screen s in Screen.AllScreens)
+                {
+                    if (!s.Primary)
+                    {
+                        NAI.Properties.Settings.TabletopScreen = s;
+                        break;
+                    }
+                }
+            }
         }
 
         #region Window Members
@@ -183,8 +202,9 @@ namespace Restaurant
             textOnPathWarped.Text = text;
             textOnPathWarped.Foreground = Brushes.Black;
             textOnPathWarped.PathFigure = pathFigure;
-            textOnPathWarped.HorizontalAlignment = HorizontalAlignment.Center;
-            textOnPathWarped.VerticalAlignment = VerticalAlignment.Center;
+
+            textOnPathWarped.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            textOnPathWarped.VerticalAlignment = System.Windows.VerticalAlignment.Center;
 
             RoundText.Child = textOnPathWarped;
         }
